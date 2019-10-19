@@ -2,7 +2,7 @@
 /// @argument1 x
 /// @argument2 y
 
-var prod = false; // set prod to true if you want to capture data
+var prod = true; // set prod to true if you want to capture data
 var name = argument0;
 var _x = argument1;
 var _y = argument2;
