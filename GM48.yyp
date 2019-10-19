@@ -84,13 +84,22 @@
                 "id": "9abf6ca3-76e4-4891-9f5d-dccc1714caf7",
                 "resourcePath": "sprites\/spr_title\/spr_title.yy",
                 "resourceType": "GMSprite"
-                }
-                },{
+            }
+        },
+        {
             "Key": "11a9017a-31c5-462b-89d2-10cf31713e1e",
             "Value": {
                 "id": "52189627-eae2-40b3-bd98-770c76595dc2",
                 "resourcePath": "tilesets\\tlBrk\\tlBrk.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "149ef810-37fc-4dc3-b79d-eee18e1cd62b",
+            "Value": {
+                "id": "a68adafe-7df4-4f9e-9834-80638a5b6346",
+                "resourcePath": "sprites\\sGrapple\\sGrapple.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -467,6 +476,14 @@
                 "id": "3b8da28a-2cf2-4bd1-a8a4-943d5f823239",
                 "resourcePath": "views\/d4f99429-0c9e-4de0-bfda-ed8f483d69fa.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d8e4a6e6-5679-455a-b1cf-4c803fe35ce2",
+            "Value": {
+                "id": "ef3908f5-a807-4234-8750-a5bf7cb3d03c",
+                "resourcePath": "objects\\oGrapple\\oGrapple.yy",
+                "resourceType": "GMObject"
             }
         },
         {
