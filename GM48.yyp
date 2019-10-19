@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "157b9a6b-4eef-4c81-9cb7-2077f7da1acf",
+            "Value": {
+                "id": "d5444f68-6c19-43e7-84d3-f8dfa88c9187",
+                "resourcePath": "sprites\\Spike\\Spike.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "160003a9-b95c-4e7d-b2d8-0120a63d1354",
             "Value": {
                 "id": "fa727999-d535-4c09-864b-bb2ddca3b4b2",

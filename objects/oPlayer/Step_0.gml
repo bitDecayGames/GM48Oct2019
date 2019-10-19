@@ -24,12 +24,12 @@ switch (state)
 		
 		vSpeed += gravity_;
 		
-		//if (_keyJump) && (grounded)
-		//{
-		//	grounded = false;
-		//	vSpeedFraction = 0;
-		//	vSpeed = -jumpSpeed;
-		//}
+		if (_keyJump) && (grounded)
+		{
+			grounded = false;
+			vSpeedFraction = 0;
+			vSpeed = -jumpSpeed;
+		}
 		
 		// Throw rope
 		if (mouse_check_button_pressed(mb_left))
