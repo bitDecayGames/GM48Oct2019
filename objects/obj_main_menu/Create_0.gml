@@ -1,5 +1,8 @@
 /// @description create menu
 
+// initialize the game
+initialize();
+
 items = [
 	"Start",
 	"Credits",
@@ -16,8 +19,8 @@ objs = [];
 changed = true;
 
 for (var i = 0; i < itemLen; ++i) {
-    var item = items[i];
 	var obj = instance_create_depth(x, y + i * itemHeight, 0, obj_button);
 	objs[i] = obj;
 }
 
+post_event("main_menu", -1, -1);

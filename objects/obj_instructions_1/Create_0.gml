@@ -8,3 +8,5 @@ items = [
 itemLen = array_length_1d(items)
 
 itemHeight = 40;
+
+post_event("instructions", -1, -1);

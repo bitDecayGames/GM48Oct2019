@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "0a32f5a9-c97c-47fe-9ace-d611c43b00bb",
+            "Value": {
+                "id": "4b9ab2d7-ccd0-4cf6-82fc-933fcf89d484",
+                "resourcePath": "scripts\/timestamp\/timestamp.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0ba66103-750d-4997-9a97-a9035c61f2f2",
             "Value": {
                 "id": "6269ab2f-3189-4f5a-a2ab-029f67163877",
@@ -143,6 +151,14 @@
             }
         },
         {
+            "Key": "684b21e1-f501-4b17-b6fe-a81bb643be7c",
+            "Value": {
+                "id": "853f3aed-5a97-4b84-97e1-ca918b2370b9",
+                "resourcePath": "objects\/obj_instructions_3\/obj_instructions_3.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "70fdb024-fe8d-4c9d-a8e4-4d42e7d29001",
             "Value": {
                 "id": "99a91f74-e30d-496c-a579-ca5f92904a8a",
@@ -164,6 +180,14 @@
                 "id": "569f12e7-9b43-4f02-8ff0-2f2087df08d9",
                 "resourcePath": "objects\/obj_credits\/obj_credits.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7bed90a7-2c8f-4233-9902-043868bebd99",
+            "Value": {
+                "id": "25ed58f3-8b83-4baf-b421-2fe296b75739",
+                "resourcePath": "scripts\/initialize\/initialize.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -196,6 +220,14 @@
                 "id": "8e1db8b7-8032-434a-b1de-e8115583e0f0",
                 "resourcePath": "rooms\/room0\/room0.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "983a940c-1660-481c-982d-87876286b8d1",
+            "Value": {
+                "id": "fa5a42a9-03c0-4954-9d2f-ab0b2d7f8247",
+                "resourcePath": "scripts\/post_event\/post_event.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -236,6 +268,14 @@
                 "id": "2189b92d-e7ac-4a4f-bc80-26c3bcf3079f",
                 "resourcePath": "options\/linux\/options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "b3a279e7-2e43-4922-8dc9-9fcb3bab3c29",
+            "Value": {
+                "id": "9fa49304-0887-49ee-9559-13908149b728",
+                "resourcePath": "scripts\/guid\/guid.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -344,7 +384,10 @@
         }
     ],
     "script_order": [
-        
+        "983a940c-1660-481c-982d-87876286b8d1",
+        "0a32f5a9-c97c-47fe-9ace-d611c43b00bb",
+        "7bed90a7-2c8f-4233-9902-043868bebd99",
+        "b3a279e7-2e43-4922-8dc9-9fcb3bab3c29"
     ],
     "tutorial": ""
 }

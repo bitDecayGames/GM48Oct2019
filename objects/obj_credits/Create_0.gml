@@ -22,3 +22,6 @@ items = [
 itemLen = array_length_1d(items)
 
 itemHeight = 35;
+
+
+post_event("view_credits", -1, -1);
