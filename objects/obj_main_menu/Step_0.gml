@@ -22,7 +22,7 @@ if (changed) {
 if (keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)) {
 	switch(items[selected]) {
 		case "Start":
-			room_goto_next();
+			room_goto(rm_instructions);
 			break;
 		case "Credits":
 			room_goto(rm_credits);
