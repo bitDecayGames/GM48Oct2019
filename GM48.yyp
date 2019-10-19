@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "1dd9f0a4-a00f-4708-97f2-a770381540bb",
+            "Value": {
+                "id": "f5eed4aa-2e26-496b-a167-218543a65715",
+                "resourcePath": "objects\\oRope\\oRope.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2144f6f6-2a8d-4300-95e1-a9f08df7477b",
             "Value": {
                 "id": "f26349db-03dd-4c12-ae78-ce6daf1fc837",
@@ -127,6 +135,14 @@
             }
         },
         {
+            "Key": "31e8b335-fdb1-4a68-8b32-866b43fabbf4",
+            "Value": {
+                "id": "710160cd-8f7a-489f-b62f-0d8be472cbe2",
+                "resourcePath": "objects\\oRopeEnd\\oRopeEnd.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "490bd5af-c213-4466-a1d5-d6371d85ce64",
             "Value": {
                 "id": "77c89cc3-0671-485b-8f9d-5fc70fd0b9e0",
@@ -148,6 +164,14 @@
                 "id": "7ff813b4-9beb-4959-97bb-7b5a7d4cefde",
                 "resourcePath": "views\/5b95010c-1dec-4406-87c9-b1d0add10c7f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5d3f98c0-fbd1-4b29-80d6-264f8f79f25a",
+            "Value": {
+                "id": "2784e7dc-f2ce-4212-a94a-f2cdc27c8ada",
+                "resourcePath": "sprites\\sRopeEnd\\sRopeEnd.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -295,6 +319,14 @@
             }
         },
         {
+            "Key": "b3659c97-3808-40bb-840b-2924e369e95a",
+            "Value": {
+                "id": "b82925c9-63cb-47b4-bac5-0c3c085f3801",
+                "resourcePath": "sprites\\sRope\\sRope.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b3a279e7-2e43-4922-8dc9-9fcb3bab3c29",
             "Value": {
                 "id": "9fa49304-0887-49ee-9559-13908149b728",
@@ -378,7 +410,7 @@
             "Key": "d4de314e-2c46-47cb-a61f-45b18a806652",
             "Value": {
                 "id": "d1e15659-f350-4fc6-a54d-90d71d416a0e",
-                "resourcePath": "sprites\\sprite5\\sprite5.yy",
+                "resourcePath": "sprites\\sPlayer\\sPlayer.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -394,7 +426,7 @@
             "Key": "e78724b2-3a65-430f-ac95-406cb094273b",
             "Value": {
                 "id": "c4a3b9e3-24ec-4bf1-b2f4-868e43651c32",
-                "resourcePath": "sprites\\sprite4\\sprite4.yy",
+                "resourcePath": "sprites\\sWall\\sWall.yy",
                 "resourceType": "GMSprite"
             }
         },

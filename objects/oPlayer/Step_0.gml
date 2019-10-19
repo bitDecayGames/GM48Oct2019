@@ -24,23 +24,32 @@ switch (state)
 		
 		vSpeed += gravity_;
 		
-		if (_keyJump) && (grounded)
-		{
-			grounded = false;
-			vSpeedFraction = 0;
-			vSpeed = -jumpSpeed;
-		}
+		//if (_keyJump) && (grounded)
+		//{
+		//	grounded = false;
+		//	vSpeedFraction = 0;
+		//	vSpeed = -jumpSpeed;
+		//}
 		
+		// Throw rope
 		if (mouse_check_button_pressed(mb_left))
 		{
 			grappleX = mouse_x;
 			grappleY = mouse_y;
-			ropeX = x;
-			ropeY = y;
-			ropeAngleVelocity = 0;
-			ropeAngle = point_direction(grappleX, grappleY, x, y);
-			ropeLength = point_direction(grappleX, grappleY, x, y);
-			state = pState.swing;
+			//ropeX = x;
+			//ropeY = y;
+			var ropeAngle = point_direction(x, y, grappleX, grappleY);
+			
+			with (instance_create_layer(x, y, "Rope", oRopeEnd))
+			{
+				speed = 25;
+				direction = ropeAngle;
+			}
+			
+			//ropeAngleVelocity = 0;
+			//ropeAngle = point_direction(grappleX, grappleY, x, y);
+			//ropeLength = point_direction(grappleX, grappleY, x, y);
+			//state = pState.swing;
 		}
 		
 	}
@@ -49,6 +58,7 @@ switch (state)
 	case pState.swing:
 	{
 		var _ropeAngleAcceleration = -0.2 * dcos(ropeAngle);
+		
 		_ropeAngleAcceleration += (_keyRight - _keyLeft) * 0.08;
 		ropeLength += (_keyDown - _keyUp) * 2;
 		ropeLength = max(ropeLength, 0);
@@ -63,7 +73,7 @@ switch (state)
 		hSpeed = ropeX -x;
 		vSpeed = ropeY - y;
 		
-		if (_keyJump)
+		if (mouse_check_button_pressed(mb_left))
 		{
 			state = pState.normal;
 			vSpeedFraction = 0;

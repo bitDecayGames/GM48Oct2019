@@ -1,0 +1,1 @@
+// Check if any part of rope is touching wall, stop moving rope end
