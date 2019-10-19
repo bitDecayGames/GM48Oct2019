@@ -51,7 +51,7 @@ switch (state)
 		var _ropeAngleAcceleration = -0.2 * dcos(ropeAngle);
 		_ropeAngleAcceleration += (_keyRight - _keyLeft) * 0.08;
 		ropeLength += (_keyDown - _keyUp) * 2;
-		ropeLength = max(ropeLength, 5);
+		ropeLength = max(ropeLength, 0);
 		
 		ropeAngleVelocity += _ropeAngleAcceleration;
 		ropeAngle += ropeAngleVelocity;
