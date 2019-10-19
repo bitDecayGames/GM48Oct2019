@@ -25,7 +25,7 @@ if (keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)) {
 			room_goto_next();
 			break;
 		case "Credits":
-			room_goto(room0);
+			room_goto(rm_credits);
 			break;
 		case "Quit":
 			game_end();
