@@ -1,4 +1,10 @@
 acceleration = 1
+grappleAcceleration = 20
+
+debug_impulse_start_x = 0
+debug_impulse_start_y = 0
+debug_impulse_end_x = 0
+debug_impulse_end_y = 0
 
 var frogeFix = physics_fixture_create();
 physics_fixture_set_box_shape(frogeFix, sprite_width / 2, sprite_height / 2)
