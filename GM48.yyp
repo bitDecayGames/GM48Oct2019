@@ -583,6 +583,14 @@
             }
         },
         {
+            "Key": "dc68b614-d5c2-41b0-823b-9a395b1635e1",
+            "Value": {
+                "id": "72e61a7a-9248-4720-bbb4-853cf6e27759",
+                "resourcePath": "rooms\\rm_deathTesting\\rm_deathTesting.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "e141f958-1c77-4669-8343-4e38f68b3d7d",
             "Value": {
                 "id": "b4b8db91-bf6f-4557-adcf-fa1a0caac84b",
