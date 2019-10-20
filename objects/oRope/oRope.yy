@@ -79,9 +79,9 @@
             "y": 16
         }
     ],
-    "physicsStartAwake": true,
+    "physicsStartAwake": false,
     "properties": null,
     "solid": false,
-    "spriteId": "544c9dc6-9d96-4872-93b2-50bf1625b729",
+    "spriteId": "f08e3ad1-37cc-40f3-b7e6-9711180069cf",
     "visible": true
 }
