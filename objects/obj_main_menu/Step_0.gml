@@ -1,9 +1,11 @@
 /// @description handle input
 
 if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
+	play_sfx_menu_move();
 	selected -= 1;
 	changed = true;
 } else if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) {
+	play_sfx_menu_move();
 	selected += 1;
 	changed = true;
 }
@@ -20,6 +22,7 @@ if (changed) {
 }
 
 if (keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)) {
+	play_sfx_menu_select();
 	switch(items[selected]) {
 		case "Start":
 			room_goto(rm_instructions);

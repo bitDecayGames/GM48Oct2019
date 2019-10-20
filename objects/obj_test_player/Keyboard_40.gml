@@ -1,4 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-sounds_loaded = true;
-audio_play_sound(TheClimbIntro, 100, false);
+
+physics_apply_impulse(x, y, 0, 7);
