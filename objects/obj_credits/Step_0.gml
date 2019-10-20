@@ -1,7 +1,7 @@
 /// @description handle going back
 
 if (!ignoreInput && keyboard_check_pressed(vk_escape)) {
-	
+	play_sfx_menu_back();
 	alarm[0] = 45;
 	ignoreInput = true;
 	
