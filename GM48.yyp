@@ -351,6 +351,14 @@
             }
         },
         {
+            "Key": "754239a0-e171-4d46-a935-b889c4171b95",
+            "Value": {
+                "id": "563174e2-9281-45bd-a779-1f311f1074f8",
+                "resourcePath": "scripts\\play_sfx_respawn\\play_sfx_respawn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "75861731-74b6-4707-a2fb-78973d41a4b2",
             "Value": {
                 "id": "3289aa0b-874d-4512-86ce-4f1a59181e17",
@@ -623,6 +631,14 @@
             }
         },
         {
+            "Key": "c791c5a0-f916-49b2-a6c1-b8cf6c718b77",
+            "Value": {
+                "id": "f68987e0-d8b3-4934-bee4-0b3425e9f6ab",
+                "resourcePath": "scripts\\play_sfx_bell\\play_sfx_bell.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c7bfe937-6ed9-4488-a247-ddb05cbbc5a4",
             "Value": {
                 "id": "62a678b9-f3b6-461a-9e22-d6e94c576072",
@@ -719,11 +735,27 @@
             }
         },
         {
+            "Key": "de3067f2-219d-46b6-9300-93bc3fbb0829",
+            "Value": {
+                "id": "56d79eaa-a6e6-4d6f-a2da-40a137b1d030",
+                "resourcePath": "sounds\\respawn\\respawn.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e141f958-1c77-4669-8343-4e38f68b3d7d",
             "Value": {
                 "id": "b4b8db91-bf6f-4557-adcf-fa1a0caac84b",
                 "resourcePath": "sprites\/SpikeBall\/SpikeBall.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e2f4f914-d20e-47ef-9fee-6613d6c69989",
+            "Value": {
+                "id": "010bf71c-74db-4177-84fb-1dc142162e3e",
+                "resourcePath": "sounds\\bell\\bell.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -827,7 +859,9 @@
         "bcf75a5c-5e38-48a6-a4db-cc3ae1a51658",
         "c80cb361-950b-4ef6-a00a-33806629be5b",
         "f00dcb89-04e3-494c-8920-ec0a46690f19",
-        "edb5f60f-09c7-4412-8b57-a7d9cd9b6b04"
+        "edb5f60f-09c7-4412-8b57-a7d9cd9b6b04",
+        "c791c5a0-f916-49b2-a6c1-b8cf6c718b77",
+        "754239a0-e171-4d46-a935-b889c4171b95"
     ],
     "tutorial": ""
 }
