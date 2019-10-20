@@ -8,6 +8,7 @@ debug_impulse_start_y = 0
 debug_impulse_end_x = 0
 debug_impulse_end_y = 0
 
+/*
 var frogeFix = physics_fixture_create();
 physics_fixture_set_box_shape(frogeFix, sprite_width / 2, sprite_height / 2)
 
@@ -29,7 +30,7 @@ physics_joint_rope_create(id, tileId, x, y, tileId.x, tileId.y, 150, true);
 physics_fixture_delete(ropeFixture);
 physics_fixture_delete(frogeFix);
 physics_fixture_delete(tileFix);
-
+*/
 /*
 state = pState.normal;
 
