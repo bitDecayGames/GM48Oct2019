@@ -76,6 +76,8 @@ if (mouse_check_button_pressed(mb_left))
 			global.currentRopeId = pointer_null
 		}
 	
+		play_sfx_throw_grapple();
+	
 		var len = array_length_1d(stackRopeSegmentObj)
 		if (len > 0 && !ds_stack_empty(stackRopeJoints))
 		{

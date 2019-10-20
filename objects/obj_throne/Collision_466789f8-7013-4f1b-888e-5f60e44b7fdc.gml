@@ -1,9 +1,14 @@
 /// @description start cutscene
 
+if playerHasHit {
+	return	
+}
+playerHasHit = true
+
 playerId = instance_create_depth(other.x, other.y, depth - 1, obj_scene_player);
 other.phy_active = false;
 other.enable_player_input = false;
-other.visible = false;
+other.image_alpha = 0;
 
 // set global boolean that you've completed the game
 global.completed_game = true;
@@ -18,7 +23,6 @@ playerId.sprite_index = spr_froge_walking;
 playerId.image_index = -1;
 playerId.image_speed = 1;
 playerId.image_xscale = -1;
-
 
 currentAlarmTimerIndex = 0;
 currentAlarmTimerTotal = timerToMoveFrogToThrone;

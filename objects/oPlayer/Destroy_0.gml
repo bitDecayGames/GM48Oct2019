@@ -1,5 +1,6 @@
 /// @description create exploding frog
 
+play_sfx_die();
 instance_create_depth(x, y, depth, obj_exploding_frog);
 
 var len = array_length_1d(stackRopeSegmentObj)
