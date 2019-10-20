@@ -447,14 +447,6 @@
             }
         },
         {
-            "Key": "6a9f8a5a-43f0-41fc-b99a-601a7d7f578c",
-            "Value": {
-                "id": "1b97fddb-aff8-4c06-8007-39ee0b7affb1",
-                "resourcePath": "tilesets\/tl_art\/tl_art.yy",
-                "resourceType": "GMTileSet"
-            }
-        },
-        {
             "Key": "71b286e1-c84b-413d-8a46-0cbdf9d16f1b",
             "Value": {
                 "id": "4323b7f4-c829-44f6-b040-659640bb9e4a",
