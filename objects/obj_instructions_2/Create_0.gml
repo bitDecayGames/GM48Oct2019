@@ -1,7 +1,7 @@
 /// @description set up items
 
 items = [
-	"Don't touch the bad stuff",
+	"Don't touch the bad stuff (or press [R] )",
 	"",
 	"Or you will restart at a checkpoint",
 ];
