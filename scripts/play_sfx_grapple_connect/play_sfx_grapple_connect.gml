@@ -1,3 +1,5 @@
+audio_stop_sound(throw_grapple);
+
 rand = random_range(0, 3);
 show_debug_message(rand);
 if (rand < 1) {
