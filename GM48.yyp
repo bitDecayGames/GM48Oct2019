@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "247261af-9789-4a94-a820-e49c99a133b1",
+            "Value": {
+                "id": "2b327311-75d4-4b36-ba67-c859a430b8e5",
+                "resourcePath": "objects\\object25\\object25.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "265101e7-c59a-4646-9b7a-a324d8a5b1c5",
             "Value": {
                 "id": "5f071058-4465-40d1-a4fc-29ebab52f55c",
@@ -247,19 +255,19 @@
             }
         },
         {
-            "Key": "470f0df0-4ac9-4859-9a6c-3074e7b39d82",
-            "Value": {
-                "id": "aedd14d9-b27c-4862-aad6-06097df09eb3",
-                "resourcePath": "sprites\\Elevator\\Elevator.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "3c673e67-a41d-483f-ab2a-2e8e8ae49bc4",
             "Value": {
                 "id": "8c6227e0-6f77-405b-a1ad-4854360f0a47",
                 "resourcePath": "sounds\\jump\\jump.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "470f0df0-4ac9-4859-9a6c-3074e7b39d82",
+            "Value": {
+                "id": "aedd14d9-b27c-4862-aad6-06097df09eb3",
+                "resourcePath": "sprites\\Elevator\\Elevator.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
