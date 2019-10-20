@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "4ab448cc-35f5-4853-9c8c-6bbfa47c5cbb",
+            "Value": {
+                "id": "ad09b677-ba4b-48db-ad47-46a6706f5dd0",
+                "resourcePath": "sprites\/spr_froge_walking\/spr_froge_walking.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4ef55679-39a4-4b60-a797-4a44ae1d5111",
             "Value": {
                 "id": "111a10d6-2c9a-46d8-9e74-ca14ccb4950f",
@@ -338,7 +346,7 @@
             "Key": "544c9dc6-9d96-4872-93b2-50bf1625b729",
             "Value": {
                 "id": "3a063bba-95fb-4178-bc1e-684672c61404",
-                "resourcePath": "sprites\\sRopeDot\\sRopeDot.yy",
+                "resourcePath": "sprites\/sRopeDot\/sRopeDot.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -391,6 +399,14 @@
             }
         },
         {
+            "Key": "6275a512-b28f-444d-a701-3746c785ea95",
+            "Value": {
+                "id": "4b0a4e76-c3bc-4c30-94dc-c809e7ed7f5a",
+                "resourcePath": "objects\/obj_crumble_tile\/obj_crumble_tile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "67a7e4c5-0116-48c1-b771-a1f0333cece2",
             "Value": {
                 "id": "940f2144-2f4a-4be8-bfa0-d0511d7b768b",
@@ -420,6 +436,14 @@
                 "id": "1b97fddb-aff8-4c06-8007-39ee0b7affb1",
                 "resourcePath": "tilesets\/tl_art\/tl_art.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "6b629c7f-be71-4a16-9e4a-3e1278eb2c6e",
+            "Value": {
+                "id": "c989a730-362d-49bb-a2be-28128130d57a",
+                "resourcePath": "objects\/obj_crown\/obj_crown.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -551,6 +575,14 @@
             }
         },
         {
+            "Key": "86d100da-5d7c-4f73-a8a4-b62345c9e2aa",
+            "Value": {
+                "id": "f894b50e-23fa-4ec6-86c1-7534494fc34e",
+                "resourcePath": "sprites\/spr_partial_crumble\/spr_partial_crumble.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "88ecc3e4-8b08-4ff3-8089-54694017a32a",
             "Value": {
                 "id": "bdcf2bb7-46f1-4736-9d65-8151343f6085",
@@ -567,11 +599,27 @@
             }
         },
         {
+            "Key": "8eb67df6-ec47-4d65-a2ef-ed0a7816944b",
+            "Value": {
+                "id": "2591c18c-bbc2-48cf-be19-5ab8aeeb839b",
+                "resourcePath": "sprites\/spr_froge_walking_crown\/spr_froge_walking_crown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9206e8c0-e5c2-4bda-882f-3ce56ccee6d8",
             "Value": {
                 "id": "d48d0afb-2735-4704-92fc-a7531847c2c0",
                 "resourcePath": "sounds\/lava\/lava.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "921cc944-e0f3-4262-9591-8627b5a02916",
+            "Value": {
+                "id": "ba8f82dd-629f-4a8b-9362-4794c8a3ee64",
+                "resourcePath": "sprites\/spr_full_crumble\/spr_full_crumble.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -599,6 +647,14 @@
             }
         },
         {
+            "Key": "9817852b-38eb-46c1-9f9d-4d37d9bf9039",
+            "Value": {
+                "id": "bc7e1d53-5411-4966-8321-995eb63e0ed3",
+                "resourcePath": "sprites\/spr_spinning_froge_crown\/spr_spinning_froge_crown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "983a940c-1660-481c-982d-87876286b8d1",
             "Value": {
                 "id": "fa5a42a9-03c0-4954-9d2f-ab0b2d7f8247",
@@ -612,6 +668,14 @@
                 "id": "b5d42353-1c8b-402e-bfa3-1675a5a80a5b",
                 "resourcePath": "objects\/obj_goto_menu_on_escape\/obj_goto_menu_on_escape.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a0d4568d-30b2-46d2-a2a9-abc195b9f9d4",
+            "Value": {
+                "id": "58e72ea0-e516-43cc-b26d-bc69b2ab05e1",
+                "resourcePath": "sprites\/spr_froge_victory_pose\/spr_froge_victory_pose.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -660,6 +724,14 @@
                 "id": "2189b92d-e7ac-4a4f-bc80-26c3bcf3079f",
                 "resourcePath": "options\/linux\/options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "aaaf64fa-03c0-4985-9d8f-6b1bb6b2b853",
+            "Value": {
+                "id": "b3df172c-b54d-4f36-8707-b488e5b8c878",
+                "resourcePath": "sprites\/spr_sitting_froge\/spr_sitting_froge.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -740,6 +812,14 @@
                 "id": "167814e4-a370-4a67-aded-fb64bb40a2f0",
                 "resourcePath": "objects\/obj_exploding_frog\/obj_exploding_frog.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bbef9c02-5065-48cc-8a52-0388f40b595a",
+            "Value": {
+                "id": "c13421ce-77c8-42ba-a8be-a5c6d5ba863e",
+                "resourcePath": "sprites\/spr_throne\/spr_throne.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -940,6 +1020,14 @@
                 "id": "5a31b45d-a062-4dc6-803c-c95411006ea1",
                 "resourcePath": "views\/e4a355a2-3b70-4873-93f1-20a5d913b753.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e74a7a98-2bfe-4899-8efa-d54612f42b34",
+            "Value": {
+                "id": "04736dc6-8614-40ee-a2e2-95ab069f29ed",
+                "resourcePath": "sprites\/spr_crown\/spr_crown.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
