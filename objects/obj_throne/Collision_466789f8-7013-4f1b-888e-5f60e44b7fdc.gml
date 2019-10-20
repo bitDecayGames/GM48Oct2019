@@ -1,18 +1,25 @@
 /// @description start cutscene
 
-playerId = other;
+playerId = instance_create_depth(other.x, other.y, depth - 1, obj_scene_player);
+other.phy_active = false;
+other.enable_player_input = false;
+other.visible = false;
+
 // set global boolean that you've completed the game
 global.completed_game = true;
-// TODO: take control away from the player
 // move player to specific point
 isFrogeMoving = true;
 frogeTarget_x = x;
 frogeTarget_y = y;
+frogeOriginal_x = playerId.x;
+frogeOriginal_y = playerId.y;
 
 playerId.sprite_index = spr_froge_walking;
 playerId.image_index = -1;
-playerId.image_speed = 7;
+playerId.image_speed = 1;
 playerId.image_xscale = -1;
-playerId.phy_active = false;
 
+
+currentAlarmTimerIndex = 0;
+currentAlarmTimerTotal = timerToMoveFrogToThrone;
 alarm[0] = timerToMoveFrogToThrone;
