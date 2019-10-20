@@ -111,28 +111,28 @@
     "physicsShape": 1,
     "physicsShapePoints": [
         {
-            "id": "9ebc8f55-7084-4157-92b3-54ebed89026a",
+            "id": "aa1b7310-37cf-4042-83c6-1061407c230e",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 0,
             "y": 0
         },
         {
-            "id": "d86d45e3-a05c-4ad8-b451-fafd2141120e",
+            "id": "9a5fcc3d-ff60-4c34-88dc-1abab998bb23",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 48,
             "y": 0
         },
         {
-            "id": "0638b376-ffb4-418a-948f-b34e2d0fb5f4",
+            "id": "d6c21d96-8e3f-42ff-86c7-ba8ed334ad99",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 48,
             "y": 48
         },
         {
-            "id": "006ad150-f9bb-4788-b7a4-bf6f2ff970f7",
+            "id": "e61a8d4b-0d77-42fd-b9d8-769b9fb19096",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 0,
