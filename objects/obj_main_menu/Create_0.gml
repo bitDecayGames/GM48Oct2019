@@ -3,6 +3,11 @@
 // initialize the game
 initialize();
 
+if (!audio_is_playing(Falling)) {
+	audio_play_sound(Falling, 100, true);
+}
+
+
 items = [
 	"Start",
 	"Credits",
