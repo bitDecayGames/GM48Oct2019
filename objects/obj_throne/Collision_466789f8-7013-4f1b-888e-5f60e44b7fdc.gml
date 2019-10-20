@@ -1,5 +1,8 @@
 /// @description start cutscene
 
+audio_stop_all();
+audio_play_sound(Throne, 0, false);
+
 playerId = instance_create_depth(other.x, other.y, depth - 1, obj_scene_player);
 other.phy_active = false;
 other.enable_player_input = false;

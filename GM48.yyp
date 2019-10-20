@@ -1143,6 +1143,14 @@
             }
         },
         {
+            "Key": "ea9eec98-ee90-457c-a9cc-a39f31a393fe",
+            "Value": {
+                "id": "feaa3c36-af6d-40c3-8797-31f998d090ab",
+                "resourcePath": "sounds\\Throne\\Throne.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "eb8ff329-d2bf-458f-92ab-c0401fea0e44",
             "Value": {
                 "id": "244646ee-518a-45ad-ac30-1d545b19e8e7",
