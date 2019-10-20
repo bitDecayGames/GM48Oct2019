@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "0fee0b00-d528-4a0e-8499-8e8a97b73440",
+            "Value": {
+                "id": "01ecbbfb-24fb-4c9c-ae63-71104b4e60d9",
+                "resourcePath": "sounds\\menu_back\\menu_back.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "11a9017a-31c5-462b-89d2-10cf31713e1e",
             "Value": {
                 "id": "52189627-eae2-40b3-bd98-770c76595dc2",
@@ -276,6 +284,14 @@
                 "id": "335f0d89-2245-488b-97fc-69040581cffd",
                 "resourcePath": "sounds\/Falling\/Falling.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "419f5c84-5826-4a60-8efa-09c6f63d0132",
+            "Value": {
+                "id": "a93e4a0c-213e-4971-9c71-0738d43d6e89",
+                "resourcePath": "scripts\\play_sfx_menu_back\\play_sfx_menu_back.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1067,7 +1083,8 @@
         "59f327ac-c062-484e-9061-3b79f1d1f1c6",
         "f440b690-b20e-452a-b2fe-5c70b904d687",
         "bf3e222d-06ca-472c-a3e6-72195bfc4cde",
-        "f126737b-88f9-4e8b-b773-1b6ae1dc1ad2"
+        "f126737b-88f9-4e8b-b773-1b6ae1dc1ad2",
+        "419f5c84-5826-4a60-8efa-09c6f63d0132"
     ],
     "tutorial": ""
 }
