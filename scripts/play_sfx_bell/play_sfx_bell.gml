@@ -1,0 +1,1 @@
+audio_play_sound(bell, 0, false);
