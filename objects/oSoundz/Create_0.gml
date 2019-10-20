@@ -5,6 +5,13 @@
 //playing_looped_theme = false;
 //audio_group_load(audiogroup_default)
 
-audio_play_sound(TheClimbIntro, 100, false);
-sounds_loaded = true;
+if(!audio_is_playing(TheClimbIntro) && !audio_is_playing(TheClimbLoop)){
+	audio_play_sound(TheClimbIntro, 100, false);
+}
+
 playing_looped_theme = false;
+if(audio_is_playing(TheClimbLoop)) {
+	playing_looped_theme = true;
+}
+
+sounds_loaded = true;
