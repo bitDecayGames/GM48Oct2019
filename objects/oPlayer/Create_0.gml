@@ -12,6 +12,9 @@ playerState = pState.normal;
 ropeState = rState.noRope;
 Rope = pointer_null;
 
+acceleration = 1
+grappleAcceleration = 20
+
 enum pState
 {
 	normal,
@@ -27,6 +30,6 @@ enum rState
 }
 
 var Fix = physics_fixture_create();
-physics_fixture_set_box_shape(Fix, sprite_width / 4, sprite_height / 4);
+physics_fixture_set_box_shape(Fix, sprite_width / 2, sprite_height / 2);
 physics_fixture_bind(Fix, id);
 physics_fixture_delete(Fix);
