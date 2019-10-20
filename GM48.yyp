@@ -1231,14 +1231,6 @@
             }
         },
         {
-            "Key": "ed990574-6054-48ef-a2ae-ecc1370313d8",
-            "Value": {
-                "id": "6dac1b32-bc90-474b-84a6-d80dd995e004",
-                "resourcePath": "views\/ed990574-6054-48ef-a2ae-ecc1370313d8.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "edb5f60f-09c7-4412-8b57-a7d9cd9b6b04",
             "Value": {
                 "id": "6ed27ad3-8f1c-4a07-88a2-841a47fd636c",
