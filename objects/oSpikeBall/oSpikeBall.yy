@@ -4,21 +4,30 @@
     "mvc": "1.0",
     "name": "oSpikeBall",
     "eventList": [
-        
+        {
+            "id": "e0a3a522-d25f-4d2a-bf8f-058a748f7119",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "74009055-d010-4bc9-b124-066f3f5cd632",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "d3c7ee42-92ec-4ab5-8092-29870804cd8f"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
-    "physicsDensity": 0.5,
+    "physicsDensity": 0,
     "physicsFriction": 0.2,
     "physicsGroup": 0,
     "physicsKinematic": false,
     "physicsLinearDamping": 0.1,
-    "physicsObject": false,
+    "physicsObject": true,
     "physicsRestitution": 0.1,
-    "physicsSensor": false,
+    "physicsSensor": true,
     "physicsShape": 2,
     "physicsShapePoints": [
         {

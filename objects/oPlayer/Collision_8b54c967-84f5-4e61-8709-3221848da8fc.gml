@@ -1,0 +1,1 @@
+instance_destroy(instance_find(oPlayer, 0));

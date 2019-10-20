@@ -25,9 +25,13 @@ if (_fireGrapplePressed)
 			global.currentRopeId = pointer_null
 		}
 	
-		if (!ds_stack_empty(stackRopeSegmentObj) && !ds_stack_empty(stackRopeJoints))
+		var len = array_length_1d(stackRopeSegmentObj)
+		if (len > 0 && !ds_stack_empty(stackRopeJoints))
 		{
-			while(ds_stack_size(stackRopeSegmentObj) > 0) instance_destroy(ds_stack_pop(stackRopeSegmentObj))
+			for (var i = 0; i < len; i++) {
+				instance_destroy(stackRopeSegmentObj[i])		
+			}
+			stackRopeSegmentObj = array_create(0)
 			while(ds_stack_size(stackRopeJoints) > 0) physics_joint_delete(ds_stack_pop(stackRopeJoints))
 		}
 		else
@@ -97,6 +101,7 @@ if (_fireGrapplePressed)
 	*/
 }
 
+/*
 // Stick rope is rope is stopped
 if (ropeState != rState.noRope)
 {
@@ -203,3 +208,4 @@ if (place_meeting(x, y+vSpeed, oWall))
 	}
 }
 y += vSpeed;
+*/

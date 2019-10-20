@@ -335,6 +335,14 @@
             }
         },
         {
+            "Key": "544c9dc6-9d96-4872-93b2-50bf1625b729",
+            "Value": {
+                "id": "3a063bba-95fb-4178-bc1e-684672c61404",
+                "resourcePath": "sprites\\sRopeDot\\sRopeDot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "59f327ac-c062-484e-9061-3b79f1d1f1c6",
             "Value": {
                 "id": "d31bba1a-ae35-4c97-a013-f143f350470a",
