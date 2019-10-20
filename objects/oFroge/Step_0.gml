@@ -14,6 +14,32 @@ if _keyLeft {
 }
 physics_apply_impulse(x, y, aX, 0);
 
+var _fireGrapplePressed = mouse_check_button_pressed(mb_left)
+if (_fireGrapplePressed)
+{
+	var grappleDirX = mouse_x - x
+	var grappleDirY = mouse_y - y
+
+	// Normalize
+	var len = sqrt((grappleDirX * grappleDirX) + (grappleDirY * grappleDirY))
+	grappleDirX = grappleDirX / len
+	grappleDirY = grappleDirY / len
+	
+	// Place grapple
+	var grappleOffset = 50
+	var grappleId = instance_create_layer(x + (grappleDirX * grappleOffset), y + (grappleDirY * grappleOffset), "Instances", oGrapple)
+	
+	var impulse_end_x = grappleDirX * grappleAcceleration
+	var impulse_end_y = grappleDirY * grappleAcceleration
+
+	debug_impulse_end_x = impulse_end_x
+	debug_impulse_end_y = impulse_end_y
+	
+	with(grappleId) {
+		physics_apply_impulse(grappleId.phy_position_x, grappleId.phy_position_y, impulse_end_x, impulse_end_y)	
+	}
+}
+
 /*
 switch (state)
 {

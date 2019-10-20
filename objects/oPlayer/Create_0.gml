@@ -8,10 +8,28 @@ jumpSpeed = 6;
 gravity_ = 0.2;
 hSpeedFraction = 0.0;
 vSpeedFraction = 0.0;
-state = pState.normal;
+playerState = pState.normal;
+ropeState = rState.noRope;
+Rope = pointer_null;
+
+acceleration = 1
+grappleAcceleration = 20
 
 enum pState
 {
 	normal,
-	swing
+	swing,
+	endSwing
 }
+
+enum rState
+{
+	noRope,
+	throwing,
+	stuck
+}
+
+var Fix = physics_fixture_create();
+physics_fixture_set_box_shape(Fix, sprite_width / 2, sprite_height / 2);
+physics_fixture_bind(Fix, id);
+physics_fixture_delete(Fix);
