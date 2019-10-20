@@ -2,7 +2,7 @@
     "id": "0f50b1f0-9309-4400-bb23-338911212ada",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oElevator",
+    "name": "obj_elevator",
     "eventList": [
         {
             "id": "fd6937e0-cd4e-4f94-a519-03bede33d9a3",
@@ -80,7 +80,22 @@
         }
     ],
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "f85e5cde-0f85-48a6-ab9d-5007048ec28a",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "checkpoint_index",
+            "varType": 1
+        }
+    ],
     "solid": false,
     "spriteId": "470f0df0-4ac9-4859-9a6c-3074e7b39d82",
     "visible": true
