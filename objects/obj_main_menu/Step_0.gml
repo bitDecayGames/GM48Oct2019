@@ -1,9 +1,11 @@
 /// @description handle input
 
 if (!ignoreInput && (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")))) {
+	play_sfx_menu_move();
 	selected -= 1;
 	changed = true;
 } else if (!ignoreInput && (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")))) {
+	play_sfx_menu_move();
 	selected += 1;
 	changed = true;
 }

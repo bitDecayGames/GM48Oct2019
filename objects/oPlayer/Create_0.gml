@@ -11,6 +11,8 @@ vSpeedFraction = 0.0;
 playerState = pState.normal;
 ropeState = rState.noRope;
 Rope = pointer_null;
+ropeJointId = pointer_null;
+grappleId = pointer_null;
 
 global.currentRopeId = pointer_null
 acceleration = 1
