@@ -2,8 +2,6 @@
 
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, image_blend, image_alpha);
 
-physics_draw_debug();
-
 // Draw dem ropes
 var len = array_length_1d(stackRopeSegmentObj)
 var curObj = id
@@ -15,4 +13,10 @@ for (var i = 0; i < len; i++) {
 	draw_sprite_ext(sRope, 0, curObj.x, curObj.y, 0.6, 0.6, rot, c_white, 1)
 	
 	curObj = nextObj
+}
+
+if global.physDebug {
+	physics_draw_debug();
+
+	draw_arrow(debugX, debugY, debugTargetX, debugTargetY, 15)
 }

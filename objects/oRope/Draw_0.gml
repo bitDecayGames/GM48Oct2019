@@ -2,4 +2,6 @@
 // You can write your code in this editor
 draw_self();
 
-//physics_draw_debug();
+if global.physDebug {
+	physics_draw_debug();	
+}
