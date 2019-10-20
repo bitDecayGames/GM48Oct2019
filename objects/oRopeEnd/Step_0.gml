@@ -1,9 +1,9 @@
-if (player != -1)
+if (player != pointer_null)
 {
-	ropeEndDistToPlayer = point_distance(x, y, originX, originY);
-	ropeStartSegment = ds_stack_top(stackRopeSegmentObj);
-	ropeStartSegmentFix = ds_stack_top(stackRopeSegmentFix);
-	ropeStartDistToPlayer = point_distance(ropeStartSegment.x, ropeStartSegment.y, player.x, player.y);
+	//var ropeEndDistToPlayer = point_distance(x, y, originX, originY);
+	//var ropeStartSegment = ds_stack_top(stackRopeSegmentObj);
+	//var ropeStartSegmentFix = ds_stack_top(stackRopeSegmentFix);
+	//var ropeStartDistToPlayer = point_distance(ropeStartSegment.x, ropeStartSegment.y, player.x, player.y);
 
 	//if (ropeEndDistToPlayer > maxLength)
 	//{
@@ -14,14 +14,14 @@ if (player != -1)
 	// Create new rope segment
 	if (!stopMakingRope)
 	{
-		vx = player.x - ropeStartSegment.x;
-		vy = player.y - ropeStartSegment.y;
-		len = sqrt(vx * vx + vy * vy);
+		var vx = player.x - ropeStartSegment.x;
+		var vy = player.y - ropeStartSegment.y;
+		var len = sqrt(vx * vx + vy * vy);
 		vx = vx / len;
 		vy = vy / len;
 
-		newSegmentX = ropeStartSegment.x + vx * ropeDistCreateSegment;
-		newSegmentY = ropeStartSegment.y + vy * ropeDistCreateSegment;
+		var newSegmentX = ropeStartSegment.x + vx * ropeDistCreateSegment;
+		var newSegmentY = ropeStartSegment.y + vy * ropeDistCreateSegment;
 
 		var newRopeSegment = instance_create_layer(newSegmentX, newSegmentY, "Rope", oRope);
 		var newRopeSegmentFix = physics_fixture_create();
@@ -37,15 +37,20 @@ if (player != -1)
 		ds_stack_push(stackRopeSegmentFix, newRopeSegmentFix);
 		
 		physics_fixture_delete(connectingFix);
-		
-		show_debug_message(ropeStartDistToPlayer);
 
-		if (ropeStartDistToPlayer < 40 && anchored)
+		if (ds_stack_size(stackRopeSegmentFix) >= 6 && anchored)
 		{
+			var playerFix = physics_fixture_create();
+			physics_fixture_set_box_shape(playerFix, player.sprite_width / 2, player.sprite_height / 2);
+			physics_fixture_bind(playerFix, player)
+
 			var playerConnectingFix = physics_fixture_create();
 			physics_fixture_bind(playerConnectingFix, newRopeSegmentFix);
 			physics_fixture_bind(playerConnectingFix, playerFix);
 			physics_joint_distance_create(newRopeSegment, player, newRopeSegment.x, newRopeSegment.y, player.x, player.y, false);
+			physics_fixture_delete(playerConnectingFix)
+	
+			physics_fixture_delete(playerFix)
 
 			stopMakingRope = true;
 		}

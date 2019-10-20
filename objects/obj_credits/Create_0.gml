@@ -23,5 +23,7 @@ itemLen = array_length_1d(items)
 
 itemHeight = 35;
 
+ignoreInput = false;
+
 
 post_event("view_credits", -1, -1);

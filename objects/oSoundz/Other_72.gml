@@ -1,3 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-audio_group_load(audiogroup_default)
+
+//sounds_loaded = true;
+//audio_play_sound(TheClimbIntro, 100, false);

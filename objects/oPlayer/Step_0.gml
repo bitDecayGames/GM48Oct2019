@@ -15,12 +15,15 @@ if _keyLeft {
 physics_apply_impulse(x, y, aX, 0);
 
 var _fireGrapplePressed = mouse_check_button_pressed(mb_left)
-if (_fireGrapplePressed)
+
+if (_fireGrapplePressed && grappleId == pointer_null)
 {
 	if global.currentRopeId != pointer_null {
 		instance_destroy(global.currentRopeId)
 		global.currentRopeId = pointer_null
 	}
+	
+	if (ropeJointId != pointer_null) physics_joint_delete(ropeJointId);	
 	
 	var grappleDirX = mouse_x - x
 	var grappleDirY = mouse_y - y
@@ -32,21 +35,16 @@ if (_fireGrapplePressed)
 	
 	// Place grapple
 	var grappleOffset = 50
-	var grappleId = instance_create_layer(x + (grappleDirX * grappleOffset), y + (grappleDirY * grappleOffset), "Rope", oGrapple)
+	grappleId = instance_create_layer(x + (grappleDirX * grappleOffset), y + (grappleDirY * grappleOffset), "Rope", oGrapple)
 	
 	var impulse_end_x = grappleDirX * grappleAcceleration
 	var impulse_end_y = grappleDirY * grappleAcceleration
-
-	debug_impulse_end_x = impulse_end_x
-	debug_impulse_end_y = impulse_end_y
 	
 	var pId = id
-	var pFix = Fix
 	with(grappleId) {
 		playerId = pId
-		playerFixture = pFix
 		
-		physics_apply_impulse(grappleId.phy_position_x, grappleId.phy_position_y, impulse_end_x, impulse_end_y)	
+		physics_apply_impulse(phy_position_x, phy_position_y, impulse_end_x, impulse_end_y)	
 	}
 	
 	////////////////////////////

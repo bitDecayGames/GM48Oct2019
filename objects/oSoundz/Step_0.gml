@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-debug_sound_controls = true;
+debug_sound_controls = false;
 
 if (sounds_loaded){	
 	if (!audio_is_playing(TheClimbIntro) && !playing_looped_theme) {

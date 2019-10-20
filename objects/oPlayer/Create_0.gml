@@ -11,6 +11,8 @@ vSpeedFraction = 0.0;
 playerState = pState.normal;
 ropeState = rState.noRope;
 Rope = pointer_null;
+ropeJointId = pointer_null;
+grappleId = pointer_null;
 
 global.currentRopeId = pointer_null
 acceleration = 1
@@ -29,7 +31,3 @@ enum rState
 	throwing,
 	stuck
 }
-
-Fix = physics_fixture_create();
-physics_fixture_set_box_shape(Fix, sprite_width / 2, sprite_height / 2);
-physics_fixture_bind(Fix, id);
