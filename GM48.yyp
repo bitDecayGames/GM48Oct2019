@@ -591,6 +591,14 @@
             }
         },
         {
+            "Key": "871a6af9-88c3-4f31-8945-ae532b0329ab",
+            "Value": {
+                "id": "591b5235-c419-4caf-9fd9-f9608779c8fe",
+                "resourcePath": "sprites\\spr_tuck_froge\\spr_tuck_froge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "88ecc3e4-8b08-4ff3-8089-54694017a32a",
             "Value": {
                 "id": "bdcf2bb7-46f1-4736-9d65-8151343f6085",
