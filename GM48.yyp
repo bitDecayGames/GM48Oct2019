@@ -631,18 +631,18 @@
             }
         },
         {
-            "Key": "931912a0-7b5b-4543-8a43-3b24b664a441",
-            "Value": {
-                "id": "5ffc1207-dc46-44a9-8183-59a2fc292108",
-                "resourcePath": "sprites\\spr_throw_frog\\spr_throw_frog.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "921cc944-e0f3-4262-9591-8627b5a02916",
             "Value": {
                 "id": "ba8f82dd-629f-4a8b-9362-4794c8a3ee64",
                 "resourcePath": "sprites\/spr_full_crumble\/spr_full_crumble.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "931912a0-7b5b-4543-8a43-3b24b664a441",
+            "Value": {
+                "id": "5ffc1207-dc46-44a9-8183-59a2fc292108",
+                "resourcePath": "sprites\\spr_throw_frog\\spr_throw_frog.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1052,6 +1052,14 @@
                 "id": "010bf71c-74db-4177-84fb-1dc142162e3e",
                 "resourcePath": "sounds\/bell\/bell.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e490fa3e-4db8-4be9-9d41-0360341c3801",
+            "Value": {
+                "id": "5a01c7e7-9d76-43b8-87ac-9693e7c80c02",
+                "resourcePath": "sprites\\sBackground\\sBackground.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
