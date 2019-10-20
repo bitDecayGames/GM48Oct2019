@@ -1,12 +1,10 @@
-var ropeId = instance_create_layer(x, y, "Rope", oRopeEnd);
-global.currentRopeId = ropeId
+var ropeEndId = instance_create_layer(x, y, "Rope", oRopeEnd);
+global.currentRopeId = ropeEndId
 
 var pId = playerId
-var pFix = playerFixture
-with (ropeId) {
+with (ropeEndId) {
 	originX = pId.x;
 	originY = pId.y;
 	player = pId;
-	playerFix = pFix
 	event_user(0);
 }
