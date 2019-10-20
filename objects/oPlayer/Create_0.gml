@@ -16,8 +16,8 @@ stackRopeSegmentObj = array_create(0)
 stackRopeJoints = ds_stack_create();
 
 global.currentRopeId = pointer_null
-acceleration = 1
-grappleAcceleration = 20
+acceleration = 5
+grappleAcceleration = 40
 
 enum pState
 {
