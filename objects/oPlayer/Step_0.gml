@@ -1,213 +1,247 @@
-if (enable_player_input){
-	grounded = (place_meeting(x, y+1, oWall));
+grounded = (place_meeting(x, y+1, oWall));
 
-	var _keyLeft = keyboard_check(ord("A"));
-	var _keyRight = keyboard_check(ord("D"));
-	var _keyUp = keyboard_check(ord("W"));
-	var _keyDown = keyboard_check(ord("S"));
-	var _keyJump = keyboard_check(vk_space);
+var _keyLeft = keyboard_check(ord("A"));
+var _keyRight = keyboard_check(ord("D"));
+var _keyUp = keyboard_check(ord("W"));
+var _keyDown = keyboard_check(ord("S"));
+var _keyJump = keyboard_check(vk_space);
+
+// Calculate impulse vector
+var segObjLen = array_length_1d(stackRopeSegmentObj)
+if segObjLen > 0 {
+	var targetSegObj = stackRopeSegmentObj[0]
+
+	var connectionDirX = targetSegObj.phy_position_x - phy_position_x
+	var connectionDirY = targetSegObj.phy_position_y - phy_position_y
+	// Normalize
+	var len = sqrt((connectionDirX * connectionDirX) + (connectionDirY * connectionDirY))
+	connectionDirX = connectionDirX / len
+	connectionDirY = connectionDirY / len
+	
+	// Find vector 90 degrees from forwards or backwards
+	var tempY = connectionDirY
+	connectionDirY = -connectionDirX
+	connectionDirX = tempY
+
+	var impulseX = connectionDirX * acceleration
+	var impulseY = connectionDirY * acceleration
 
 	var aX = 0
+	var aY = 0
 	if _keyLeft {
-		aX -= acceleration	
+		aX += impulseX
+		aY += impulseY
 	} else if _keyRight {
-		aX += acceleration
+		aX -= impulseX
+		aY -= impulseY
 	}
-	physics_apply_impulse(x, y, aX, 0);
+	physics_apply_impulse(phy_position_x, phy_position_y, aX, aY);
 
-	var _fireGrapplePressed = mouse_check_button_pressed(mb_left)
+	debugX = phy_position_x
+	debugY = phy_position_y
+	debugTargetX = phy_position_x + aX * 10
+	debugTargetY = phy_position_y + aY * 10
+} else {
+	// Walking
+	var walkAX = 0
+	if _keyLeft {
+		walkAX -= acceleration
+	} else if _keyRight {
+		walkAX += acceleration
+	}
+	physics_apply_impulse(phy_position_x, phy_position_y, walkAX, 0);
+}
 
-	if (_fireGrapplePressed)
+var _fireGrapplePressed = mouse_check_button_pressed(mb_left)
+if (_fireGrapplePressed)
+{
+	if (grappleId == pointer_null)
 	{
-		if (grappleId == pointer_null)
+		if global.currentRopeId != pointer_null {
+			instance_destroy(global.currentRopeId)
+			global.currentRopeId = pointer_null
+		}
+	
+		var len = array_length_1d(stackRopeSegmentObj)
+		if (len > 0 && !ds_stack_empty(stackRopeJoints))
 		{
-			if global.currentRopeId != pointer_null {
-				instance_destroy(global.currentRopeId)
-				global.currentRopeId = pointer_null
+			for (var i = 0; i < len; i++) {
+				instance_destroy(stackRopeSegmentObj[i])		
 			}
-	
-			var len = array_length_1d(stackRopeSegmentObj)
-			if (len > 0 && !ds_stack_empty(stackRopeJoints))
-			{
-				for (var i = 0; i < len; i++) {
-					instance_destroy(stackRopeSegmentObj[i])		
-				}
-				stackRopeSegmentObj = array_create(0)
-				while(ds_stack_size(stackRopeJoints) > 0) physics_joint_delete(ds_stack_pop(stackRopeJoints))
-			}
-			else
-			{
-	
-				var grappleDirX = mouse_x - x
-				var grappleDirY = mouse_y - y
-
-				// Normalize
-				var len = sqrt((grappleDirX * grappleDirX) + (grappleDirY * grappleDirY))
-				grappleDirX = grappleDirX / len
-				grappleDirY = grappleDirY / len
-	
-				// Place grapple
-				var grappleOffset = 50
-				grappleId = instance_create_layer(x + (grappleDirX * grappleOffset), y + (grappleDirY * grappleOffset), "Rope", oGrapple)
-	
-				var impulse_end_x = grappleDirX * grappleAcceleration
-				var impulse_end_y = grappleDirY * grappleAcceleration
-	
-				var pId = id
-				with(grappleId) {
-					playerId = pId
-		
-					physics_apply_impulse(phy_position_x, phy_position_y, impulse_end_x, impulse_end_y)
-				}
-			}
+			stackRopeSegmentObj = array_create(0)
+			while(ds_stack_size(stackRopeJoints) > 0) physics_joint_delete(ds_stack_pop(stackRopeJoints))
 		}
 		else
 		{
-			instance_destroy(grappleId)
-		}
-	
-		////////////////////////////
-		/*
-		switch (ropeState)
-		{
-			case rState.noRope:
-			{
-				grappleX = mouse_x;
-				grappleY = mouse_y;
-				ropeAngleVelocity = 0;
-				ropeAngle = point_direction(x, y, grappleX, grappleY);
-				ropeLength = point_direction(x, y, grappleX, grappleY);
-			
-				Rope = instance_create_layer(grappleX, grappleY, "Rope", oRopeEnd);
-				var playerId = id;
-				with (Rope)
-				{
-					originX = playerId.x;
-					originY = playerId.y;
-					player = playerId;
-					event_user(0);
-				}
-			
-				ropeState = rState.throwing;
-			}
-			break;
-		
-			default:
-			{
-				ropeState = rState.noRope;
-				instance_destroy(Rope.id);
-			}
-			break;
-		}
-		*/
-	}
+			var grappleDirX = mouse_x - x
+			var grappleDirY = mouse_y - y
 
+			// Normalize
+			var len = sqrt((grappleDirX * grappleDirX) + (grappleDirY * grappleDirY))
+			grappleDirX = grappleDirX / len
+			grappleDirY = grappleDirY / len
+	
+			// Place grapple
+			var grappleOffset = 50
+			grappleId = instance_create_layer(x + (grappleDirX * grappleOffset), y + (grappleDirY * grappleOffset), "Rope", oGrapple)
+	
+			var impulse_end_x = grappleDirX * grappleAcceleration
+			var impulse_end_y = grappleDirY * grappleAcceleration
+	
+			var pId = id
+			with(grappleId) {
+				playerId = pId
+		
+				physics_apply_impulse(phy_position_x, phy_position_y, impulse_end_x, impulse_end_y)
+			}
+		}
+	}
+	else
+	{
+		instance_destroy(grappleId)
+	}
+	
+	////////////////////////////
 	/*
-	// Stick rope is rope is stopped
-	if (ropeState != rState.noRope)
+	switch (ropeState)
 	{
-		if (Rope.speed == 0) ropeState = rState.stuck;
-	}
-
-	// Handle player movement
-	switch (playerState)
-	{
-		case pState.normal:
+		case rState.noRope:
 		{
-			//hSpeed = (_keyRight - _keyLeft) * walkSpeed;
-			var dir = _keyRight - _keyLeft;
-			hSpeed += dir * walkAcceleration;
-		
-			if (dir == 0)
-			{
-				var hFriction = hFrictionGround;
-				if (!grounded) hFriction = hFrictionAir;
-				hSpeed = approach(hSpeed, 0, hFriction);
-			}
-			hSpeed = clamp(hSpeed, -walkSpeed, walkSpeed);
-		
-			vSpeed += gravity_;
-		
-			if (_keyJump) && (grounded)
-			{
-				grounded = false;
-				vSpeedFraction = 0;
-				vSpeed = -jumpSpeed;
-			}
-		
-			if (ropeState == rState.stuck) playerState = pState.swing;
-		}
-		break;
-	
-		case pState.swing:
-		{
-			if (ropeState == rState.noRope)
-			{
-				playerState = pState.endSwing;
-			}
-			else
-			{
-				//var _ropeAngleAcceleration = -0.2 * dcos(ropeAngle);
-		
-				//_ropeAngleAcceleration += (_keyRight - _keyLeft) * 0.08;
-				//ropeLength += (_keyDown - _keyUp) * 2;
-				//ropeLength = max(ropeLength, 0);
-		
-				//ropeAngleVelocity += _ropeAngleAcceleration;
-				//ropeAngle += ropeAngleVelocity;
-				//ropeAngleVelocity *= 0.99;
-		
-				//Rope.x = grappleX + lengthdir_x(ropeLength, ropeAngle);
-				//Rope.y = grappleY + lengthdir_y(ropeLength, ropeAngle);
-		
-				//hSpeed = Rope.x -x;
-				//vSpeed = Rope.y - y;
-			}
-		}
-		break;
-	
-		case pState.endSwing:
-		{
-			vSpeedFraction = 0;
-			vSpeed = -jumpSpeed;
-			playerState = pState.normal;
-		}
-		break;
-	}
-
-	hSpeed += hSpeedFraction;
-	vSpeed += vSpeedFraction;
-	hSpeedFraction = frac(hSpeed);
-	vSpeedFraction = frac(vSpeed);
-	hSpeed -= hSpeedFraction;
-	vSpeed -= vSpeedFraction;
-
-	if (place_meeting(x+hSpeed, y, oWall))
-	{
-		var _hStep = sign(hSpeed);
-		hSpeed = 0;
-		hSpeedFraction = 0;
-		while(!place_meeting(x+_hStep, y, oWall)) x += _hStep;
-		if (playerState == pState.swing)
-		{
-			ropeAngle = point_direction(x, y, grappleX, grappleY);
+			grappleX = mouse_x;
+			grappleY = mouse_y;
 			ropeAngleVelocity = 0;
-		}
-	}
-	x += hSpeed;
-
-	if (place_meeting(x, y+vSpeed, oWall))
-	{
-		var _vStep = sign(vSpeed);
-		vSpeed = 0;
-		vSpeedFraction = 0;
-		while(!place_meeting(x, y+_vStep, oWall)) y += _vStep;
-		if (playerState == pState.swing)
-		{
 			ropeAngle = point_direction(x, y, grappleX, grappleY);
-			ropeAngleVelocity = 0;
+			ropeLength = point_direction(x, y, grappleX, grappleY);
+			
+			Rope = instance_create_layer(grappleX, grappleY, "Rope", oRopeEnd);
+			var playerId = id;
+			with (Rope)
+			{
+				originX = playerId.x;
+				originY = playerId.y;
+				player = playerId;
+				event_user(0);
+			}
+			
+			ropeState = rState.throwing;
 		}
+		break;
+		
+		default:
+		{
+			ropeState = rState.noRope;
+			instance_destroy(Rope.id);
+		}
+		break;
 	}
-	y += vSpeed;
 	*/
 }
+
+/*
+// Stick rope is rope is stopped
+if (ropeState != rState.noRope)
+{
+	if (Rope.speed == 0) ropeState = rState.stuck;
+}
+
+// Handle player movement
+switch (playerState)
+{
+	case pState.normal:
+	{
+		//hSpeed = (_keyRight - _keyLeft) * walkSpeed;
+		var dir = _keyRight - _keyLeft;
+		hSpeed += dir * walkAcceleration;
+		
+		if (dir == 0)
+		{
+			var hFriction = hFrictionGround;
+			if (!grounded) hFriction = hFrictionAir;
+			hSpeed = approach(hSpeed, 0, hFriction);
+		}
+		hSpeed = clamp(hSpeed, -walkSpeed, walkSpeed);
+		
+		vSpeed += gravity_;
+		
+		if (_keyJump) && (grounded)
+		{
+			grounded = false;
+			vSpeedFraction = 0;
+			vSpeed = -jumpSpeed;
+		}
+		
+		if (ropeState == rState.stuck) playerState = pState.swing;
+	}
+	break;
+	
+	case pState.swing:
+	{
+		if (ropeState == rState.noRope)
+		{
+			playerState = pState.endSwing;
+		}
+		else
+		{
+			//var _ropeAngleAcceleration = -0.2 * dcos(ropeAngle);
+		
+			//_ropeAngleAcceleration += (_keyRight - _keyLeft) * 0.08;
+			//ropeLength += (_keyDown - _keyUp) * 2;
+			//ropeLength = max(ropeLength, 0);
+		
+			//ropeAngleVelocity += _ropeAngleAcceleration;
+			//ropeAngle += ropeAngleVelocity;
+			//ropeAngleVelocity *= 0.99;
+		
+			//Rope.x = grappleX + lengthdir_x(ropeLength, ropeAngle);
+			//Rope.y = grappleY + lengthdir_y(ropeLength, ropeAngle);
+		
+			//hSpeed = Rope.x -x;
+			//vSpeed = Rope.y - y;
+		}
+	}
+	break;
+	
+	case pState.endSwing:
+	{
+		vSpeedFraction = 0;
+		vSpeed = -jumpSpeed;
+		playerState = pState.normal;
+	}
+	break;
+}
+
+hSpeed += hSpeedFraction;
+vSpeed += vSpeedFraction;
+hSpeedFraction = frac(hSpeed);
+vSpeedFraction = frac(vSpeed);
+hSpeed -= hSpeedFraction;
+vSpeed -= vSpeedFraction;
+
+if (place_meeting(x+hSpeed, y, oWall))
+{
+	var _hStep = sign(hSpeed);
+	hSpeed = 0;
+	hSpeedFraction = 0;
+	while(!place_meeting(x+_hStep, y, oWall)) x += _hStep;
+	if (playerState == pState.swing)
+	{
+		ropeAngle = point_direction(x, y, grappleX, grappleY);
+		ropeAngleVelocity = 0;
+	}
+}
+x += hSpeed;
+
+if (place_meeting(x, y+vSpeed, oWall))
+{
+	var _vStep = sign(vSpeed);
+	vSpeed = 0;
+	vSpeedFraction = 0;
+	while(!place_meeting(x, y+_vStep, oWall)) y += _vStep;
+	if (playerState == pState.swing)
+	{
+		ropeAngle = point_direction(x, y, grappleX, grappleY);
+		ropeAngleVelocity = 0;
+	}
+}
+y += vSpeed;
+*/

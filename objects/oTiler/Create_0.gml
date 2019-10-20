@@ -13,7 +13,7 @@ for (var p_x = tile_width / 2; p_x < room_width; p_x += tile_width)
 		var data = tilemap_get(tilemap_id, c_x, c_y);
 		var tile_idx = tile_get_index(data);
 		if tile_idx < 1 {
-			continue	
+			continue
 		}
 
 		with(instance_create_layer(p_x, p_y, "Instances", oTile)) {

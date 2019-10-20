@@ -2,7 +2,7 @@
 
 items = [
 	"Use the Grappling Hook to move",
-	"[Left Click] / [A]",
+	"[Left Click] / [A][D]",
 	"You can aim with your mouse",
 ];
 itemLen = array_length_1d(items)
