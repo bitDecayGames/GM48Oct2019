@@ -36,8 +36,10 @@ if (_fireGrapplePressed)
 	debug_impulse_end_y = impulse_end_y
 	
 	var pId = id
+	var pFix = Fix
 	with(grappleId) {
 		playerId = pId
+		playerFixture = pFix
 		
 		physics_apply_impulse(grappleId.phy_position_x, grappleId.phy_position_y, impulse_end_x, impulse_end_y)	
 	}

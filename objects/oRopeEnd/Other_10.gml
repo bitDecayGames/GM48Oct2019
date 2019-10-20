@@ -1,9 +1,5 @@
 //@Hax hack
 
-var ropeEndFix = physics_fixture_create();
-physics_fixture_set_circle_shape(ropeEndFix, sprite_height / 2);
-physics_fixture_bind(ropeEndFix, id);
-
 var vx = player.x - x;
 var vy = player.y - y;
 var len = sqrt(vx * vx + vy * vy);
@@ -21,7 +17,7 @@ physics_fixture_bind(newRopeSegmentFix, newRopeSegment.id);
 var connectingFix = physics_fixture_create();
 physics_fixture_bind(connectingFix, ropeEndFix);
 physics_fixture_bind(connectingFix, newRopeSegmentFix);
-physics_joint_rope_create(newRopeSegment, id, newRopeSegment.x, newRopeSegment.y, x, y, 5, false);
+physics_joint_distance_create(newRopeSegment, id, newRopeSegment.x, newRopeSegment.y, x, y, false);
 
 ds_stack_push(stackRopeSegmentObj, newRopeSegment);
 ds_stack_push(stackRopeSegmentFix, newRopeSegmentFix);
