@@ -25,14 +25,10 @@ if (_fireGrapplePressed)
 			global.currentRopeId = pointer_null
 		}
 	
-		if (playerRopeId != pointer_null && ropeWallId != pointer_null && rope != pointer_null)
+		if (!ds_stack_empty(stackRopeSegmentObj) && !ds_stack_empty(stackRopeJoints))
 		{
-			instance_destroy(rope);
-			rope = pointer_null
-			physics_joint_delete(ropeWallId);
-			ropeWallId = pointer_null
-			physics_joint_delete(playerRopeId);
-			playerRopeId = pointer_null
+			while(ds_stack_size(stackRopeSegmentObj) > 0) instance_destroy(ds_stack_pop(stackRopeSegmentObj))
+			while(ds_stack_size(stackRopeJoints) > 0) physics_joint_delete(ds_stack_pop(stackRopeJoints))
 		}
 		else
 		{
