@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
     "id": "4ef55679-39a4-4b60-a797-4a44ae1d5111",
     "modelName": "GMFolder",
@@ -40,6 +41,8 @@
     "isDefaultView": true,
     "localisedFolderName": ""
 =======
+=======
+>>>>>>> c1f797635a662f3f44441ac9654e47a62fe17a5c
 {
     "id": "4ef55679-39a4-4b60-a797-4a44ae1d5111",
     "modelName": "GMFolder",
@@ -66,5 +69,8 @@
     "folderName": "Default",
     "isDefaultView": true,
     "localisedFolderName": ""
+<<<<<<< HEAD
 >>>>>>> 4d7732d45663aa8da82c51a45f38806f4af69e76
+=======
+>>>>>>> c1f797635a662f3f44441ac9654e47a62fe17a5c
 }
