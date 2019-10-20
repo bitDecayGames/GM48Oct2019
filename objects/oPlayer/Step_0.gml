@@ -44,6 +44,7 @@ if segObjLen > 0 {
 	debugTargetX = phy_position_x + aX * 10
 	debugTargetY = phy_position_y + aY * 10
 } else {
+	/*
 	// Walking
 	var walkAX = 0
 	if _keyLeft {
@@ -52,6 +53,7 @@ if segObjLen > 0 {
 		walkAX += acceleration
 	}
 	physics_apply_impulse(phy_position_x, phy_position_y, walkAX, 0);
+	*/
 }
 
 var _fireGrapplePressed = mouse_check_button_pressed(mb_left)

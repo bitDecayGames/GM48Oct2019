@@ -9,3 +9,7 @@ for (var i = 0; i < len; i++) {
 stackRopeSegmentObj = array_create(0)
 
 while(ds_stack_size(stackRopeJoints) > 0) physics_joint_delete(ds_stack_pop(stackRopeJoints))
+
+if grappleId != pointer_null && instance_exists(grappleId) {
+	instance_destroy(grappleId)	
+}
