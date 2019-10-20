@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(!has_fired || mouse_check_button_pressed(mb_left)){
+if(!has_fired){
 	has_fired = true;
 	part_emitter_region(part_system, part_emitter, x, x, y, y, 
 		ps_shape_rectangle, ps_distr_linear);
