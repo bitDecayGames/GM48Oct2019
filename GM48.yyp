@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "717999f9-bd9e-4c66-ac1c-62b26b592737",
+            "Value": {
+                "id": "9de86e7b-f7f4-4beb-ba82-4a55b5a04ab2",
+                "resourcePath": "objects\\oSpike\\oSpike.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "71b286e1-c84b-413d-8a46-0cbdf9d16f1b",
             "Value": {
                 "id": "4323b7f4-c829-44f6-b040-659640bb9e4a",
@@ -388,6 +396,14 @@
                 "id": "fa5a42a9-03c0-4954-9d2f-ab0b2d7f8247",
                 "resourcePath": "scripts\/post_event\/post_event.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9efdb922-a53a-499f-8ad3-fd8f5e212fc4",
+            "Value": {
+                "id": "66a606d1-1732-4944-9121-e053c1b95ba0",
+                "resourcePath": "sprites\\SpikeBall\\SpikeBall.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -563,6 +579,14 @@
             "Value": {
                 "id": "ef3908f5-a807-4234-8750-a5bf7cb3d03c",
                 "resourcePath": "objects\\oGrapple\\oGrapple.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e38213c1-def8-4085-a6ee-b57ff89599cb",
+            "Value": {
+                "id": "20649b0c-6d9c-4fd0-98a7-e4ef9192f804",
+                "resourcePath": "objects\\oSpikeball\\oSpikeball.yy",
                 "resourceType": "GMObject"
             }
         },
