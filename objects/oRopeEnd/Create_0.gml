@@ -1,0 +1,9 @@
+maxLength = 300;
+originX = 0;
+originY = 0;
+ropeDistCreateSegment = 5;
+ropeDistDestroySegment = 7;
+player = -1;
+firstSegmentCreated = false;
+stackRopeSegmentObj = ds_stack_create();
+stackRopeSegmentFix = ds_stack_create();

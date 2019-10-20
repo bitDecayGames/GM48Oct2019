@@ -6,7 +6,50 @@ var _keyUp = keyboard_check(ord("W"));
 var _keyDown = keyboard_check(ord("S"));
 var _keyJump = keyboard_check(vk_space);
 
-switch (state)
+// Throw rope or retract rope based on rope state
+if (mouse_check_button_pressed(mb_left))
+{
+	switch (ropeState)
+	{
+		case rState.noRope:
+		{
+			grappleX = mouse_x;
+			grappleY = mouse_y;
+			ropeAngleVelocity = 0;
+			ropeAngle = point_direction(x, y, grappleX, grappleY);
+			ropeLength = point_direction(x, y, grappleX, grappleY);
+			
+			Rope = instance_create_layer(grappleX, grappleY, "Rope", oRopeEnd);
+			var playerId = id;
+			with (Rope)
+			{
+				originX = x;
+				originY = y;
+				player = playerId;
+				event_user(0);
+			}
+			
+			ropeState = rState.throwing;
+		}
+		break;
+		
+		default:
+		{
+			ropeState = rState.noRope;
+			instance_destroy(Rope.id);
+		}
+		break;
+	}
+}
+
+// Stick rope is rope is stopped
+if (ropeState != rState.noRope)
+{
+	if (Rope.speed == 0) ropeState = rState.stuck;
+}
+
+// Handle player movement
+switch (playerState)
 {
 	case pState.normal:
 	{
@@ -31,54 +74,42 @@ switch (state)
 			vSpeed = -jumpSpeed;
 		}
 		
-		// Throw rope
-		if (mouse_check_button_pressed(mb_left))
-		{
-			grappleX = mouse_x;
-			grappleY = mouse_y;
-			//ropeX = x;
-			//ropeY = y;
-			var ropeAngle = point_direction(x, y, grappleX, grappleY);
-			
-			with (instance_create_layer(x, y, "Rope", oRopeEnd))
-			{
-				speed = 25;
-				direction = ropeAngle;
-			}
-			
-			//ropeAngleVelocity = 0;
-			//ropeAngle = point_direction(grappleX, grappleY, x, y);
-			//ropeLength = point_direction(grappleX, grappleY, x, y);
-			//state = pState.swing;
-		}
-		
+		if (ropeState == rState.stuck) playerState = pState.swing;
 	}
 	break;
 	
 	case pState.swing:
 	{
-		var _ropeAngleAcceleration = -0.2 * dcos(ropeAngle);
-		
-		_ropeAngleAcceleration += (_keyRight - _keyLeft) * 0.08;
-		ropeLength += (_keyDown - _keyUp) * 2;
-		ropeLength = max(ropeLength, 0);
-		
-		ropeAngleVelocity += _ropeAngleAcceleration;
-		ropeAngle += ropeAngleVelocity;
-		ropeAngleVelocity *= 0.99;
-		
-		ropeX = grappleX + lengthdir_x(ropeLength, ropeAngle);
-		ropeY = grappleY + lengthdir_y(ropeLength, ropeAngle);
-		
-		hSpeed = ropeX -x;
-		vSpeed = ropeY - y;
-		
-		if (mouse_check_button_pressed(mb_left))
+		if (ropeState == rState.noRope)
 		{
-			state = pState.normal;
-			vSpeedFraction = 0;
-			vSpeed = -jumpSpeed;
+			playerState = pState.endSwing;
 		}
+		else
+		{
+			//var _ropeAngleAcceleration = -0.2 * dcos(ropeAngle);
+		
+			//_ropeAngleAcceleration += (_keyRight - _keyLeft) * 0.08;
+			//ropeLength += (_keyDown - _keyUp) * 2;
+			//ropeLength = max(ropeLength, 0);
+		
+			//ropeAngleVelocity += _ropeAngleAcceleration;
+			//ropeAngle += ropeAngleVelocity;
+			//ropeAngleVelocity *= 0.99;
+		
+			//Rope.x = grappleX + lengthdir_x(ropeLength, ropeAngle);
+			//Rope.y = grappleY + lengthdir_y(ropeLength, ropeAngle);
+		
+			//hSpeed = Rope.x -x;
+			//vSpeed = Rope.y - y;
+		}
+	}
+	break;
+	
+	case pState.endSwing:
+	{
+		vSpeedFraction = 0;
+		vSpeed = -jumpSpeed;
+		playerState = pState.normal;
 	}
 	break;
 }
@@ -96,9 +127,9 @@ if (place_meeting(x+hSpeed, y, oWall))
 	hSpeed = 0;
 	hSpeedFraction = 0;
 	while(!place_meeting(x+_hStep, y, oWall)) x += _hStep;
-	if (state == pState.swing)
+	if (playerState == pState.swing)
 	{
-		ropeAngle = point_direction(grappleX, grappleY, x, y);
+		ropeAngle = point_direction(x, y, grappleX, grappleY);
 		ropeAngleVelocity = 0;
 	}
 }
@@ -110,9 +141,9 @@ if (place_meeting(x, y+vSpeed, oWall))
 	vSpeed = 0;
 	vSpeedFraction = 0;
 	while(!place_meeting(x, y+_vStep, oWall)) y += _vStep;
-	if (state == pState.swing)
+	if (playerState == pState.swing)
 	{
-		ropeAngle = point_direction(grappleX, grappleY, x, y);
+		ropeAngle = point_direction(x, y, grappleX, grappleY);
 		ropeAngleVelocity = 0;
 	}
 }
