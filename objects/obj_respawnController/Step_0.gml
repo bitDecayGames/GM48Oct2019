@@ -2,5 +2,5 @@
 var _killPlayerCode = keyboard_check_pressed(ord("R"));
 
 if(_killPlayerCode) {	
-	instance_destroy(instance_find(oFroge, 0));
+	instance_destroy(instance_find(oPlayer, 0));
 }

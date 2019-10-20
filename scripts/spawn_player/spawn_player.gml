@@ -10,7 +10,7 @@ if (global.should_spawn_player){
 		    var inst = instance_find(obj_elevator, i);
 		    if (inst.checkpoint_index == global.checkpoint_index) {
 				global.should_spawn_player = false;
-				var player = instance_create_layer(inst.x + inst.sprite_width /2, inst.y  + inst.sprite_height /2,"Instances",oFroge);
+				var player = instance_create_layer(inst.x + inst.sprite_width /2, inst.y  + inst.sprite_height /2,"Instances",oPlayer);
 				player.depth = -10;
 				i = checkpointCount;
 				break;
