@@ -22,7 +22,7 @@ for (var i = 0; i < numSegments; ++i)
 	physics_fixture_set_box_shape(nextRopeSegmentFix, nextRopeSegment.sprite_width / 4, nextRopeSegment.sprite_width / 4)
 	physics_fixture_bind(nextRopeSegmentFix, nextRopeSegment)
 	
-	ds_stack_push(playerId.stackRopeSegmentObj, nextRopeSegment)
+	playerId.stackRopeSegmentObj[i] = nextRopeSegment
 
 	var ropeConnectingFix = physics_fixture_create();
 	physics_fixture_bind(ropeConnectingFix, lastRopeSegmentFix);
