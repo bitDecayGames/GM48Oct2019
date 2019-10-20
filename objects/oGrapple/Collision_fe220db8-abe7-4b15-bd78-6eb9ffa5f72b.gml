@@ -57,8 +57,12 @@ physics_fixture_delete(lastRopeSegmentFix)
 physics_fixture_delete(nextRopeSegmentFix)
 physics_fixture_delete(ropeConnectingFix)
 
-instance_destroy()
+//player animation logic
+playerId.image_speed = 1;
+playerId.sprite_index = spr_start_swing_frog;
 
+
+instance_destroy()
 
 //var ropeDistance = point_distance(other.x, other.y, playerId.x, playerId.y)
 
