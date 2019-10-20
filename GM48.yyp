@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "1dd9f0a4-a00f-4708-97f2-a770381540bb",
+            "Value": {
+                "id": "4ab69e10-a108-400c-a78e-19ba14fc0f54",
+                "resourcePath": "objects\\oRope\\oRope.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2144f6f6-2a8d-4300-95e1-a9f08df7477b",
             "Value": {
                 "id": "f26349db-03dd-4c12-ae78-ce6daf1fc837",
