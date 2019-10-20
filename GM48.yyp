@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "0f50b1f0-9309-4400-bb23-338911212ada",
+            "Value": {
+                "id": "feb77935-37a0-491d-be2e-062b0c7eaceb",
+                "resourcePath": "objects\\oElevator\\oElevator.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "11a9017a-31c5-462b-89d2-10cf31713e1e",
             "Value": {
                 "id": "52189627-eae2-40b3-bd98-770c76595dc2",
@@ -220,6 +228,14 @@
                 "id": "710160cd-8f7a-489f-b62f-0d8be472cbe2",
                 "resourcePath": "objects\/oRopeEnd\/oRopeEnd.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "470f0df0-4ac9-4859-9a6c-3074e7b39d82",
+            "Value": {
+                "id": "aedd14d9-b27c-4862-aad6-06097df09eb3",
+                "resourcePath": "sprites\\Elevator\\Elevator.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
