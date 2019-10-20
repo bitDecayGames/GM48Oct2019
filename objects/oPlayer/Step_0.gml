@@ -1,3 +1,5 @@
+if (!enable_player_input) return;
+
 grounded = (place_meeting(x, y+1, oWall));
 
 var _keyLeft = keyboard_check(ord("A"));
@@ -6,16 +8,53 @@ var _keyUp = keyboard_check(ord("W"));
 var _keyDown = keyboard_check(ord("S"));
 var _keyJump = keyboard_check(vk_space);
 
-var aX = 0
-if _keyLeft {
-	aX -= acceleration	
-} else if _keyRight {
-	aX += acceleration
+// Calculate impulse vector
+var segObjLen = array_length_1d(stackRopeSegmentObj)
+if segObjLen > 0 {
+	var targetSegObj = stackRopeSegmentObj[0]
+
+	var connectionDirX = targetSegObj.phy_position_x - phy_position_x
+	var connectionDirY = targetSegObj.phy_position_y - phy_position_y
+	// Normalize
+	var len = sqrt((connectionDirX * connectionDirX) + (connectionDirY * connectionDirY))
+	connectionDirX = connectionDirX / len
+	connectionDirY = connectionDirY / len
+	
+	// Find vector 90 degrees from forwards or backwards
+	var tempY = connectionDirY
+	connectionDirY = -connectionDirX
+	connectionDirX = tempY
+
+	var impulseX = connectionDirX * acceleration
+	var impulseY = connectionDirY * acceleration
+
+	var aX = 0
+	var aY = 0
+	if _keyLeft {
+		aX += impulseX
+		aY += impulseY
+	} else if _keyRight {
+		aX -= impulseX
+		aY -= impulseY
+	}
+	physics_apply_impulse(phy_position_x, phy_position_y, aX, aY);
+
+	debugX = phy_position_x
+	debugY = phy_position_y
+	debugTargetX = phy_position_x + aX * 10
+	debugTargetY = phy_position_y + aY * 10
+} else {
+	// Walking
+	var walkAX = 0
+	if _keyLeft {
+		walkAX -= acceleration
+	} else if _keyRight {
+		walkAX += acceleration
+	}
+	physics_apply_impulse(phy_position_x, phy_position_y, walkAX, 0);
 }
-physics_apply_impulse(x, y, aX, 0);
 
 var _fireGrapplePressed = mouse_check_button_pressed(mb_left)
-
 if (_fireGrapplePressed)
 {
 	if (grappleId == pointer_null)
@@ -36,7 +75,6 @@ if (_fireGrapplePressed)
 		}
 		else
 		{
-	
 			var grappleDirX = mouse_x - x
 			var grappleDirY = mouse_y - y
 
