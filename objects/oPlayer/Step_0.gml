@@ -8,6 +8,13 @@ var _keyUp = keyboard_check(ord("W"));
 var _keyDown = keyboard_check(ord("S"));
 var _keyJump = keyboard_check(vk_space);
 
+//animation logic
+if(image_index > image_number-1 && sprite_index == spr_throw_frog) image_speed = 0;
+if(image_index > image_number-1 && sprite_index == spr_start_swing_frog) 
+{
+	sprite_index = spr_swinging_frog;
+}
+
 // Calculate impulse vector
 var segObjLen = array_length_1d(stackRopeSegmentObj)
 if segObjLen > 0 {
@@ -31,9 +38,11 @@ if segObjLen > 0 {
 	var aX = 0
 	var aY = 0
 	if _keyLeft {
+		image_xscale = -1;
 		aX += impulseX
 		aY += impulseY
 	} else if _keyRight {
+		image_xscale = 1;
 		aX -= impulseX
 		aY -= impulseY
 	}
@@ -48,8 +57,10 @@ if segObjLen > 0 {
 	// Walking
 	var walkAX = 0
 	if _keyLeft {
+		image_xscale = -1;
 		walkAX -= acceleration
 	} else if _keyRight {
+		image_xscale = 1;
 		walkAX += acceleration
 	}
 	physics_apply_impulse(phy_position_x, phy_position_y, walkAX, 0);
@@ -75,6 +86,8 @@ if (mouse_check_button_pressed(mb_left))
 			}
 			stackRopeSegmentObj = array_create(0)
 			while(ds_stack_size(stackRopeJoints) > 0) physics_joint_delete(ds_stack_pop(stackRopeJoints))
+			
+			sprite_index = sFroge;
 		}
 		else
 		{
@@ -99,6 +112,10 @@ if (mouse_check_button_pressed(mb_left))
 		
 				physics_apply_impulse(phy_position_x, phy_position_y, impulse_end_x, impulse_end_y)
 			}
+			
+			image_speed = 1;
+			sprite_index = spr_throw_frog;
+			
 		}
 	}
 } else if (!mouse_check_button(mb_left)) {
@@ -117,5 +134,6 @@ if (mouse_check_button_pressed(mb_left))
 		}
 		stackRopeSegmentObj = array_create(0)
 		while(ds_stack_size(stackRopeJoints) > 0) physics_joint_delete(ds_stack_pop(stackRopeJoints))
+		sprite_index = sFroge;
 	}
 }
