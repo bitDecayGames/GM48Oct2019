@@ -101,6 +101,7 @@ if (_fireGrapplePressed)
 	*/
 }
 
+/*
 // Stick rope is rope is stopped
 if (ropeState != rState.noRope)
 {
@@ -207,3 +208,4 @@ if (place_meeting(x, y+vSpeed, oWall))
 	}
 }
 y += vSpeed;
+*/
