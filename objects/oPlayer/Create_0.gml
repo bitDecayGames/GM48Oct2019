@@ -21,7 +21,7 @@ global.currentRopeId = pointer_null
 acceleration = 5
 grappleAcceleration = 40
 
-global.physDebug = true
+global.physDebug = false
 debugX = 0
 debugY = 0
 debugTargetX = 0
