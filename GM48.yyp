@@ -263,14 +263,6 @@
             }
         },
         {
-            "Key": "470f0df0-4ac9-4859-9a6c-3074e7b39d82",
-            "Value": {
-                "id": "aedd14d9-b27c-4862-aad6-06097df09eb3",
-                "resourcePath": "sprites\\Elevator\\Elevator.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "490bd5af-c213-4466-a1d5-d6371d85ce64",
             "Value": {
                 "id": "77c89cc3-0671-485b-8f9d-5fc70fd0b9e0",
