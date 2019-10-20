@@ -39,7 +39,7 @@ for (var i = 0; i < numSegments; ++i)
 }
 
 var playerFix = physics_fixture_create();
-physics_fixture_set_box_shape(playerFix, playerId.sprite_width / 2, playerId.sprite_height / 2);
+physics_fixture_set_circle_shape(playerFix, playerId.sprite_width / 2);
 physics_fixture_bind(playerFix, playerId)
 
 var lastRopeSegmentFix = physics_fixture_create();
