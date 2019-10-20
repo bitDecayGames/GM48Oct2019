@@ -62,7 +62,7 @@ physics_fixture_delete(ropeConnectingFix)
 //player animation logic
 playerId.image_speed = 1;
 playerId.sprite_index = spr_start_swing_frog;
-
+play_sfx_grapple_connect();
 
 instance_destroy()
 
