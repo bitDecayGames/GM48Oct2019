@@ -36,17 +36,12 @@ if (_fireGrapplePressed)
 	
 	var impulse_end_x = grappleDirX * grappleAcceleration
 	var impulse_end_y = grappleDirY * grappleAcceleration
-
-	debug_impulse_end_x = impulse_end_x
-	debug_impulse_end_y = impulse_end_y
 	
 	var pId = id
-	var pFix = Fix
 	with(grappleId) {
 		playerId = pId
-		playerFixture = pFix
 		
-		physics_apply_impulse(grappleId.phy_position_x, grappleId.phy_position_y, impulse_end_x, impulse_end_y)	
+		physics_apply_impulse(phy_position_x, phy_position_y, impulse_end_x, impulse_end_y)	
 	}
 	
 	////////////////////////////
