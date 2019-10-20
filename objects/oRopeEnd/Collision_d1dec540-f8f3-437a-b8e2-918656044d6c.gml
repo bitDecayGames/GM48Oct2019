@@ -10,4 +10,8 @@ physics_fixture_bind(connectingFix, ropeEndFix);
 physics_fixture_bind(connectingFix, wallFix);
 physics_joint_distance_create(id, other.id, x, y, other.x, other.y, false);
 
+physics_fixture_delete(connectingFix)
+
+physics_fixture_delete(wallFix)
+
 anchored = true;
