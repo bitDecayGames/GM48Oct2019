@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "71b286e1-c84b-413d-8a46-0cbdf9d16f1b",
+            "Value": {
+                "id": "4323b7f4-c829-44f6-b040-659640bb9e4a",
+                "resourcePath": "objects\\oFroge\\oFroge.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "74009055-d010-4bc9-b124-066f3f5cd632",
             "Value": {
                 "id": "e1a54277-adfa-43fb-9919-2cd26d7bcc90",
@@ -356,6 +364,14 @@
                 "id": "9fa49304-0887-49ee-9559-13908149b728",
                 "resourcePath": "scripts\/guid\/guid.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b6f3bd87-5a10-4989-bb31-55eb22862a7d",
+            "Value": {
+                "id": "2987dc58-9aaf-4d23-b069-5face54af2ca",
+                "resourcePath": "sprites\\sFroge\\sFroge.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
