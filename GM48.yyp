@@ -39,19 +39,35 @@
       }
     },
     {
-      "Key":"00c24845-2b91-4be4-9df8-8788aea4bdf3",
-      "Value":{
-        "id":"a1672248-bdec-4f8c-ba23-75842756aa61",
-        "resourcePath":"views\/00c24845-2b91-4be4-9df8-8788aea4bdf3.yy",
-        "resourceType":"GMFolder"
-      }
-    },
-    {
       "Key":"035ee5c4-6c4a-4129-8ad3-911ed5eb37c6",
       "Value":{
         "id":"bd8b191e-2641-4fa6-8a42-62cbb7b4e95f",
         "resourcePath":"objects\/obj_bathtub\/obj_bathtub.yy",
         "resourceType":"GMObject"
+      }
+    },
+    {
+      "Key": "c0f90a88-a6be-441e-946d-1099b859516c",
+      "Value": {
+        "id": "cb17551c-659a-4551-b5d4-7965eb0b5b62",
+        "resourcePath": "objects\\respawnController\\respawnController.yy",
+        "resourceType": "GMObject"
+      }
+    },
+    {
+      "Key": "88ecc3e4-8b08-4ff3-8089-54694017a32a",
+      "Value": {
+        "id": "bdcf2bb7-46f1-4736-9d65-8151343f6085",
+        "resourcePath": "rooms\\rm_respawn\\rm_respawn.yy",
+        "resourceType": "GMRoom"
+      }
+    },
+    {
+      "Key": "00c24845-2b91-4be4-9df8-8788aea4bdf3",
+      "Value": {
+        "id": "a1672248-bdec-4f8c-ba23-75842756aa61",
+        "resourcePath": "views/00c24845-2b91-4be4-9df8-8788aea4bdf3.yy",
+        "resourceType": "GMFolder"
       }
     },
     {
