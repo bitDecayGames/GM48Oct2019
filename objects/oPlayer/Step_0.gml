@@ -16,35 +16,53 @@ physics_apply_impulse(x, y, aX, 0);
 
 var _fireGrapplePressed = mouse_check_button_pressed(mb_left)
 
-if (_fireGrapplePressed && grappleId == pointer_null)
+if (_fireGrapplePressed)
 {
-	if global.currentRopeId != pointer_null {
-		instance_destroy(global.currentRopeId)
-		global.currentRopeId = pointer_null
-	}
+	if (grappleId == pointer_null)
+	{
+		if global.currentRopeId != pointer_null {
+			instance_destroy(global.currentRopeId)
+			global.currentRopeId = pointer_null
+		}
 	
-	if (ropeJointId != pointer_null) physics_joint_delete(ropeJointId);	
+		if (playerRopeId != pointer_null && ropeWallId != pointer_null && rope != pointer_null)
+		{
+			instance_destroy(rope);
+			rope = pointer_null
+			physics_joint_delete(ropeWallId);
+			ropeWallId = pointer_null
+			physics_joint_delete(playerRopeId);
+			playerRopeId = pointer_null
+		}
+		else
+		{
 	
-	var grappleDirX = mouse_x - x
-	var grappleDirY = mouse_y - y
+			var grappleDirX = mouse_x - x
+			var grappleDirY = mouse_y - y
 
-	// Normalize
-	var len = sqrt((grappleDirX * grappleDirX) + (grappleDirY * grappleDirY))
-	grappleDirX = grappleDirX / len
-	grappleDirY = grappleDirY / len
+			// Normalize
+			var len = sqrt((grappleDirX * grappleDirX) + (grappleDirY * grappleDirY))
+			grappleDirX = grappleDirX / len
+			grappleDirY = grappleDirY / len
 	
-	// Place grapple
-	var grappleOffset = 50
-	grappleId = instance_create_layer(x + (grappleDirX * grappleOffset), y + (grappleDirY * grappleOffset), "Rope", oGrapple)
+			// Place grapple
+			var grappleOffset = 50
+			grappleId = instance_create_layer(x + (grappleDirX * grappleOffset), y + (grappleDirY * grappleOffset), "Rope", oGrapple)
 	
-	var impulse_end_x = grappleDirX * grappleAcceleration
-	var impulse_end_y = grappleDirY * grappleAcceleration
+			var impulse_end_x = grappleDirX * grappleAcceleration
+			var impulse_end_y = grappleDirY * grappleAcceleration
 	
-	var pId = id
-	with(grappleId) {
-		playerId = pId
+			var pId = id
+			with(grappleId) {
+				playerId = pId
 		
-		physics_apply_impulse(phy_position_x, phy_position_y, impulse_end_x, impulse_end_y)	
+				physics_apply_impulse(phy_position_x, phy_position_y, impulse_end_x, impulse_end_y)
+			}
+		}
+	}
+	else
+	{
+		instance_destroy(grappleId)
 	}
 	
 	////////////////////////////

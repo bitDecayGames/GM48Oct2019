@@ -1,5 +1,7 @@
+global.playerId = id;
 acceleration = 1
 grappleAcceleration = 20
+
 
 debug_impulse_start_x = 0
 debug_impulse_start_y = 0
