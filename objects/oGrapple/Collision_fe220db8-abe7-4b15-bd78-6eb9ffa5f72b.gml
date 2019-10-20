@@ -3,6 +3,8 @@ var numSegments = ropeDistance / ropeDistCreateSegment
 
 var lastRopeSegment = other;
 
+var ropeDis = 4
+
 for (var i = 0; i < numSegments; ++i)
 {
 	var lastRopeSegmentFix = physics_fixture_create();
@@ -27,7 +29,7 @@ for (var i = 0; i < numSegments; ++i)
 	var ropeConnectingFix = physics_fixture_create();
 	physics_fixture_bind(ropeConnectingFix, lastRopeSegmentFix);
 	physics_fixture_bind(ropeConnectingFix, nextRopeSegmentFix);
-	var ropeConnectingId = physics_joint_distance_create(lastRopeSegment, nextRopeSegment, lastRopeSegment.x, lastRopeSegment.y, nextRopeSegment.x, nextRopeSegment.y, true);
+	var ropeConnectingId = physics_joint_rope_create(lastRopeSegment, nextRopeSegment, lastRopeSegment.x, lastRopeSegment.y, nextRopeSegment.x, nextRopeSegment.y, ropeDis, true);
 	
 	ds_stack_push(playerId.stackRopeJoints, ropeConnectingId)
 
@@ -49,7 +51,7 @@ physics_fixture_bind(lastRopeSegmentFix, lastRopeSegment);
 var playerRopeConnectingFix = physics_fixture_create();
 physics_fixture_bind(playerRopeConnectingFix, playerFix);
 physics_fixture_bind(playerRopeConnectingFix, lastRopeSegmentFix);
-var playerRopeConnectingId = physics_joint_distance_create(lastRopeSegment, playerId, lastRopeSegment.x, lastRopeSegment.y, playerId.x, playerId.y, true);
+var playerRopeConnectingId = physics_joint_rope_create(lastRopeSegment, playerId, lastRopeSegment.x, lastRopeSegment.y, playerId.x, playerId.y, ropeDis, true);
 
 ds_stack_push(playerId.stackRopeJoints, playerRopeConnectingId)
 
