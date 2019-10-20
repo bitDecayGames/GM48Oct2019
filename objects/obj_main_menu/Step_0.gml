@@ -1,10 +1,10 @@
 /// @description handle input
 
-if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
+if (!ignoreInput && (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")))) {
 	play_sfx_menu_move();
 	selected -= 1;
 	changed = true;
-} else if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) {
+} else if (!ignoreInput && (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")))) {
 	play_sfx_menu_move();
 	selected += 1;
 	changed = true;
@@ -21,18 +21,12 @@ if (changed) {
 	changed = false;
 }
 
-if (keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)) {
+if (!ignoreInput && (keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter))) {
+	alarm[0] = 45;
+	ignoreInput = true;
+	
+	var frog = instance_find(obj_spinning_frog, 0);
+	frog.isFalling = true;
 	play_sfx_menu_select();
-	switch(items[selected]) {
-		case "Start":
-			room_goto(rm_instructions);
-			break;
-		case "Credits":
-			room_goto(rm_credits);
-			break;
-		case "Quit":
-			game_end();
-			break;
-	}
 }
 

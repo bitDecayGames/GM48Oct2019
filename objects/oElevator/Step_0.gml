@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (place_meeting(x,y,oFroge) && !doneAnimating) image_speed = 5;
+if ((place_meeting(x,y,oFroge) || place_meeting(x,y,oPlayer)) && !doneAnimating) 
+{
+	image_speed = 5;
+	global.elevatorCheckpointId = id;
+}
 
 if (!doneAnimating && image_index == 10) 
 {
