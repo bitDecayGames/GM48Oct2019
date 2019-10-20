@@ -29,7 +29,7 @@ if (_hasSnapshot) {
 
 // TODO: create in layer instead of depth so that collisions happen correctly
 // TODO: create the real player object
-var player = instance_create_depth(_x, _y, 0, oFroge);
+var player = instance_create_depth(_x, _y, 0, oPlayer);
 
 if (_hasSnapshot) {
 	player.phy_linear_velocity_x = global.player_velocity_x;
