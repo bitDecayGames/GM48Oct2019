@@ -4,21 +4,30 @@
     "mvc": "1.0",
     "name": "oSpikes",
     "eventList": [
-        
+        {
+            "id": "1899e215-bcc0-4940-a50d-4788b2a758b1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "74009055-d010-4bc9-b124-066f3f5cd632",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "74ce7a30-60b3-4c20-bc03-d2885b9e3314"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
-    "physicsDensity": 0.5,
+    "physicsDensity": 0,
     "physicsFriction": 0.2,
     "physicsGroup": 0,
     "physicsKinematic": false,
     "physicsLinearDamping": 0.1,
-    "physicsObject": false,
+    "physicsObject": true,
     "physicsRestitution": 0.1,
-    "physicsSensor": false,
+    "physicsSensor": true,
     "physicsShape": 1,
     "physicsShapePoints": [
         {
