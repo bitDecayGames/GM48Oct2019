@@ -11,7 +11,7 @@ physics_fixture_bind(playerFix, playerId)
 var playerConnectingFix = physics_fixture_create();
 physics_fixture_bind(playerConnectingFix, wallFix);
 physics_fixture_bind(playerConnectingFix, playerFix);
-var ropeJointId = physics_joint_rope_create(other, playerId, other.x, other.y, playerId.x, playerId.y, ropeDistance, false);
+var ropeJointId = physics_joint_rope_create(other, playerId, other.x, other.y, playerId.x, playerId.y, ropeDistance, true);
 playerId.ropeJointId = ropeJointId
 
 physics_fixture_delete(wallFix)
