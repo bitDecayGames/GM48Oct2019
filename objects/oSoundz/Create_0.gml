@@ -7,3 +7,4 @@
 
 audio_play_sound(TheClimbIntro, 100, false);
 sounds_loaded = true;
+playing_looped_theme = false;
