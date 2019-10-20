@@ -8,7 +8,5 @@ with (ropeId) {
 	originY = pId.y;
 	player = pId;
 	playerFix = pFix
-	solid = true;
-	anchored = true;
 	event_user(0);
 }

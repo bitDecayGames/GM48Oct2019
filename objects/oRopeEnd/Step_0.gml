@@ -11,13 +11,6 @@ if (player != -1)
 	//	instance_destroy(id);
 	//}
 
-	// Rope Stopping thing. Change later
-	if (place_meeting(x, y, oTile) && !anchored)
-	{
-		solid = true;
-		anchored = true;
-	}
-
 	// Create new rope segment
 	if (!stopMakingRope)
 	{
@@ -44,8 +37,10 @@ if (player != -1)
 		ds_stack_push(stackRopeSegmentFix, newRopeSegmentFix);
 		
 		physics_fixture_delete(connectingFix);
+		
+		show_debug_message(ropeStartDistToPlayer);
 
-		if (ropeStartDistToPlayer < 10 && anchored)
+		if (ropeStartDistToPlayer < 40 && anchored)
 		{
 			var playerConnectingFix = physics_fixture_create();
 			physics_fixture_bind(playerConnectingFix, newRopeSegmentFix);
@@ -58,9 +53,9 @@ if (player != -1)
 		physics_fixture_delete(newRopeSegmentFix);
 	}
 	// Destroy last rope segment
-	if (ds_stack_size(stackRopeSegmentObj) > 1 && ropeStartDistToPlayer < ropeDistDestroySegment)
-	{
-		instance_destroy(ds_stack_pop(stackRopeSegmentObj));
-		instance_destroy(ds_stack_pop(stackRopeSegmentFix));
-	}
+	//if (ds_stack_size(stackRopeSegmentObj) > 1 && ropeStartDistToPlayer < ropeDistDestroySegment)
+	//{
+	//	instance_destroy(ds_stack_pop(stackRopeSegmentObj));
+	//	instance_destroy(ds_stack_pop(stackRopeSegmentFix));
+	//}
 }
