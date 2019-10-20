@@ -35,12 +35,14 @@ if (_fireGrapplePressed)
 	debug_impulse_end_x = impulse_end_x
 	debug_impulse_end_y = impulse_end_y
 	
+	var pId = id
 	with(grappleId) {
+		playerId = pId
+		
 		physics_apply_impulse(grappleId.phy_position_x, grappleId.phy_position_y, impulse_end_x, impulse_end_y)	
 	}
 	
 	////////////////////////////
-	
 	/*
 	switch (ropeState)
 	{
@@ -56,8 +58,8 @@ if (_fireGrapplePressed)
 			var playerId = id;
 			with (Rope)
 			{
-				originX = x;
-				originY = y;
+				originX = playerId.x;
+				originY = playerId.y;
 				player = playerId;
 				event_user(0);
 			}
