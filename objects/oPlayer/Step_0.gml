@@ -17,6 +17,11 @@ physics_apply_impulse(x, y, aX, 0);
 var _fireGrapplePressed = mouse_check_button_pressed(mb_left)
 if (_fireGrapplePressed)
 {
+	if global.currentRopeId != pointer_null {
+		instance_destroy(global.currentRopeId)
+		global.currentRopeId = pointer_null
+	}
+	
 	var grappleDirX = mouse_x - x
 	var grappleDirY = mouse_y - y
 

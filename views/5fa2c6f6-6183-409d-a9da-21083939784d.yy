@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD:views/5fa2c6f6-6183-409d-a9da-21083939784d.yy
+    "id": "5fa2c6f6-6183-409d-a9da-21083939784d",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "5fa2c6f6-6183-409d-a9da-21083939784d",
+=======
     "id": "02448fc8-6ffb-4823-a653-7f5d7191122f",
     "modelName": "GMFolder",
     "mvc": "1.1",
     "name": "02448fc8-6ffb-4823-a653-7f5d7191122f",
+>>>>>>> c1f797635a662f3f44441ac9654e47a62fe17a5c:views/02448fc8-6ffb-4823-a653-7f5d7191122f.yy
     "children": [
         "7a4f8851-4da4-42fc-9539-77a9adadcc77",
         "bebba75f-f79b-4045-bd5d-bbfa84c41974",
