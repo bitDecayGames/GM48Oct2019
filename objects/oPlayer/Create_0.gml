@@ -12,6 +12,7 @@ playerState = pState.normal;
 ropeState = rState.noRope;
 Rope = pointer_null;
 
+global.currentRopeId = pointer_null
 acceleration = 1
 grappleAcceleration = 20
 

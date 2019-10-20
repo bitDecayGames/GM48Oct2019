@@ -1,0 +1,1 @@
+audio_play_sound(tongue_contact, 0, false);

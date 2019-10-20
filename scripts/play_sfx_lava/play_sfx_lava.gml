@@ -1,0 +1,1 @@
+audio_play_sound(lava, 0, false);
