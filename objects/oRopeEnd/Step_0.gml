@@ -1,9 +1,9 @@
 if (player != pointer_null)
 {
-	var ropeEndDistToPlayer = point_distance(x, y, originX, originY);
-	var ropeStartSegment = ds_stack_top(stackRopeSegmentObj);
-	var ropeStartSegmentFix = ds_stack_top(stackRopeSegmentFix);
-	var ropeStartDistToPlayer = point_distance(ropeStartSegment.x, ropeStartSegment.y, player.x, player.y);
+	//var ropeEndDistToPlayer = point_distance(x, y, originX, originY);
+	//var ropeStartSegment = ds_stack_top(stackRopeSegmentObj);
+	//var ropeStartSegmentFix = ds_stack_top(stackRopeSegmentFix);
+	//var ropeStartDistToPlayer = point_distance(ropeStartSegment.x, ropeStartSegment.y, player.x, player.y);
 
 	//if (ropeEndDistToPlayer > maxLength)
 	//{
