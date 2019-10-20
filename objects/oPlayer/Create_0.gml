@@ -12,8 +12,8 @@ playerState = pState.normal;
 ropeState = rState.noRope;
 rope = pointer_null;
 grappleId = pointer_null;
-ropeWallId = pointer_null;
-playerRopeId = pointer_null;
+stackRopeSegmentObj = ds_stack_create();
+stackRopeJoints = ds_stack_create();
 
 global.currentRopeId = pointer_null
 acceleration = 1
