@@ -18,8 +18,8 @@ stackRopeSegmentObj = array_create(0)
 stackRopeJoints = ds_stack_create();
 
 global.currentRopeId = pointer_null
-acceleration = 5
-grappleAcceleration = 40
+acceleration = 16
+grappleAcceleration = 120
 
 global.physDebug = false
 debugX = 0
