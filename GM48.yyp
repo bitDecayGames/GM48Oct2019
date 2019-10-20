@@ -351,6 +351,14 @@
             }
         },
         {
+            "Key": "7282a4a6-822d-4d41-ae50-51b863febdcf",
+            "Value": {
+                "id": "99617dc7-7e11-4de1-9c0d-a04e63472b3d",
+                "resourcePath": "sprites\/spr_title_bg\/spr_title_bg.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "73ecea23-34cd-4e29-938e-d97d48c20e93",
             "Value": {
                 "id": "f31326b7-93d5-418e-9596-d0d87efc4fe0",
@@ -378,7 +386,7 @@
             "Key": "754239a0-e171-4d46-a935-b889c4171b95",
             "Value": {
                 "id": "563174e2-9281-45bd-a779-1f311f1074f8",
-                "resourcePath": "scripts\\play_sfx_respawn\\play_sfx_respawn.yy",
+                "resourcePath": "scripts\/play_sfx_respawn\/play_sfx_respawn.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -551,6 +559,14 @@
             }
         },
         {
+            "Key": "abbc1cb4-4a94-4556-accb-daffa1c2ac85",
+            "Value": {
+                "id": "41072c0c-e8ed-4a89-a57b-b72718b94569",
+                "resourcePath": "objects\/obj_spinning_frog\/obj_spinning_frog.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ae5886af-bf94-4898-9108-b344a342a71d",
             "Value": {
                 "id": "baf28e9b-2642-47ef-b749-e3d0bbef66cf",
@@ -658,7 +674,7 @@
             "Key": "c791c5a0-f916-49b2-a6c1-b8cf6c718b77",
             "Value": {
                 "id": "f68987e0-d8b3-4934-bee4-0b3425e9f6ab",
-                "resourcePath": "scripts\\play_sfx_bell\\play_sfx_bell.yy",
+                "resourcePath": "scripts\/play_sfx_bell\/play_sfx_bell.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -751,19 +767,19 @@
             }
         },
         {
+            "Key": "de3067f2-219d-46b6-9300-93bc3fbb0829",
+            "Value": {
+                "id": "56d79eaa-a6e6-4d6f-a2da-40a137b1d030",
+                "resourcePath": "sounds\/respawn\/respawn.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "de9ff5c1-7404-4873-a8be-8a2253e99e7e",
             "Value": {
                 "id": "f1056c9f-0d1d-493d-982e-951ccd30f039",
                 "resourcePath": "sprites\/spr_level_edge_trigger_h\/spr_level_edge_trigger_h.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "de3067f2-219d-46b6-9300-93bc3fbb0829",
-            "Value": {
-                "id": "56d79eaa-a6e6-4d6f-a2da-40a137b1d030",
-                "resourcePath": "sounds\\respawn\\respawn.yy",
-                "resourceType": "GMSound"
             }
         },
         {
@@ -783,17 +799,19 @@
             }
         },
         {
+            "Key": "e2f4f914-d20e-47ef-9fee-6613d6c69989",
+            "Value": {
+                "id": "010bf71c-74db-4177-84fb-1dc142162e3e",
+                "resourcePath": "sounds\/bell\/bell.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e722c503-a9cb-4567-a002-789a084bccda",
             "Value": {
                 "id": "8043f51a-84c6-44fe-88d4-dcce656fb4ec",
                 "resourcePath": "objects\/obj_player_spawner\/obj_player_spawner.yy",
                 "resourceType": "GMObject"
-}},{
-            "Key": "e2f4f914-d20e-47ef-9fee-6613d6c69989",
-            "Value": {
-                "id": "010bf71c-74db-4177-84fb-1dc142162e3e",
-                "resourcePath": "sounds\\bell\\bell.yy",
-                "resourceType": "GMSound"
             }
         },
         {
@@ -826,6 +844,14 @@
                 "id": "b0b34240-89fc-46b7-98f1-2a9a188cdb33",
                 "resourcePath": "scripts\/play_sfx_jump\/play_sfx_jump.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f163aa26-1b23-45a6-896d-9ba1e86e5a94",
+            "Value": {
+                "id": "db362ffd-6d29-4171-9c3e-8c53f1bcd267",
+                "resourcePath": "sprites\/spr_spinning_frog\/spr_spinning_frog.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

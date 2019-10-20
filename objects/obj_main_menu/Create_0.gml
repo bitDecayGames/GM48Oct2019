@@ -10,6 +10,8 @@ items = [
 ];
 itemLen = array_length_1d(items)
 
+ignoreInput = false;
+
 
 itemOffset = 220;
 itemHeight = 130;
