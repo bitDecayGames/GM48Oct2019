@@ -431,6 +431,14 @@
             }
         },
         {
+            "Key": "88ecc3e4-8b08-4ff3-8089-54694017a32a",
+            "Value": {
+                "id": "bdcf2bb7-46f1-4736-9d65-8151343f6085",
+                "resourcePath": "rooms\\rm_respawn\\rm_respawn.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "8929a137-ee69-4c29-a4b9-6eb01c6fb43b",
             "Value": {
                 "id": "de9559ee-3f29-49e2-9c15-8205de09a8e2",
@@ -623,6 +631,14 @@
             }
         },
         {
+            "Key": "c0f90a88-a6be-441e-946d-1099b859516c",
+            "Value": {
+                "id": "cb17551c-659a-4551-b5d4-7965eb0b5b62",
+                "resourcePath": "objects\\respawnController\\respawnController.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c63de0a2-c746-434b-adde-b2a7c02a528a",
             "Value": {
                 "id": "77b0ed2f-324d-4a09-ba64-e3a45c6732af",
@@ -724,14 +740,6 @@
                 "id": "ef3908f5-a807-4234-8750-a5bf7cb3d03c",
                 "resourcePath": "objects\/oGrapple\/oGrapple.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "dc68b614-d5c2-41b0-823b-9a395b1635e1",
-            "Value": {
-                "id": "72e61a7a-9248-4720-bbb4-853cf6e27759",
-                "resourcePath": "rooms\/rm_deathTesting\/rm_deathTesting.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
