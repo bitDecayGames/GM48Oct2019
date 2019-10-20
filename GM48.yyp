@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "74ce7a30-60b3-4c20-bc03-d2885b9e3314",
+            "Value": {
+                "id": "f05126bc-d658-4f13-a994-9edc967ce436",
+                "resourcePath": "objects\\oSpikes\\oSpikes.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "75861731-74b6-4707-a2fb-78973d41a4b2",
             "Value": {
                 "id": "3289aa0b-874d-4512-86ce-4f1a59181e17",
@@ -543,6 +551,14 @@
             }
         },
         {
+            "Key": "d3c7ee42-92ec-4ab5-8092-29870804cd8f",
+            "Value": {
+                "id": "b419586e-9f9e-414e-b26b-e844c3533c97",
+                "resourcePath": "objects\\oSpikeBall\\oSpikeBall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d4de314e-2c46-47cb-a61f-45b18a806652",
             "Value": {
                 "id": "d1e15659-f350-4fc6-a54d-90d71d416a0e",
@@ -564,6 +580,14 @@
                 "id": "ef3908f5-a807-4234-8750-a5bf7cb3d03c",
                 "resourcePath": "objects\\oGrapple\\oGrapple.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e141f958-1c77-4669-8343-4e38f68b3d7d",
+            "Value": {
+                "id": "b4b8db91-bf6f-4557-adcf-fa1a0caac84b",
+                "resourcePath": "sprites\\SpikeBall\\SpikeBall.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
