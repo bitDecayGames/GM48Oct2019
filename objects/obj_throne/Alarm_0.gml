@@ -14,5 +14,8 @@ isFrogeMoving = false;
 crownId = instance_create_depth(x, y + crownStartY, depth - 1, obj_crown);
 isCrownMoving = true;
 
-
+crownOriginal_x = crownId.x;
+crownOriginal_y = crownId.y;
+currentAlarmTimerIndex = 1;
+currentAlarmTimerTotal = timerToDropCrown;
 alarm[1] = timerToDropCrown;

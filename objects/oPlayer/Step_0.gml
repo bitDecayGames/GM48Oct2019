@@ -1,3 +1,5 @@
+if (!enable_player_input) return;
+
 grounded = (place_meeting(x, y+1, oWall));
 
 var _keyLeft = keyboard_check(ord("A"));
