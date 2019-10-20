@@ -12,7 +12,7 @@ items = [
 	"Logan Moore",
 	"Mike Wingfield",
 	"",
-	"SOUND",
+	"Music composition/SFX",
 	"Tanner Moore",
 	"",
 	"",
