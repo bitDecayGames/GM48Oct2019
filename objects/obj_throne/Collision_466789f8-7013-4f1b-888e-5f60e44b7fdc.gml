@@ -1,5 +1,7 @@
 /// @description start cutscene
 
+audio_stop_all();
+audio_play_sound(Throne, 0, false);
 if playerHasHit {
 	return	
 }
