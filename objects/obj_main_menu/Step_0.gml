@@ -27,5 +27,6 @@ if (!ignoreInput && (keyboard_check_pressed(vk_space) || keyboard_check_pressed(
 	
 	var frog = instance_find(obj_spinning_frog, 0);
 	frog.isFalling = true;
+	play_sfx_menu_select();
 }
 
