@@ -1,0 +1,1 @@
+audio_play_sound(lick, 0, false);

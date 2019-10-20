@@ -11,14 +11,8 @@ if (player != -1)
 	//	instance_destroy(id);
 	//}
 
-	// Rope Stopping thing. Change later
-	//if (place_meeting(x,y,oWall))
-	//{
-	//	speed = 0;
-	//}
-
 	// Create new rope segment
-	if (ropeStartDistToPlayer > 100)
+	if (!stopMakingRope)
 	{
 		vx = player.x - ropeStartSegment.x;
 		vy = player.y - ropeStartSegment.y;
@@ -37,18 +31,31 @@ if (player != -1)
 		var connectingFix = physics_fixture_create();
 		physics_fixture_bind(connectingFix, newRopeSegmentFix);
 		physics_fixture_bind(connectingFix, ropeStartSegmentFix);
-		physics_joint_rope_create(newRopeSegment, ropeStartSegment, newRopeSegment.x, newRopeSegment.y, ropeStartSegment.x, ropeStartSegment.y, 5, false);
+		physics_joint_distance_create(newRopeSegment, ropeStartSegment, newRopeSegment.x, newRopeSegment.y, ropeStartSegment.x, ropeStartSegment.y, false);
 	
 		ds_stack_push(stackRopeSegmentObj, newRopeSegment);
 		ds_stack_push(stackRopeSegmentFix, newRopeSegmentFix);
-
-		physics_fixture_delete(newRopeSegmentFix);
+		
 		physics_fixture_delete(connectingFix);
+		
+		show_debug_message(ropeStartDistToPlayer);
+
+		if (ropeStartDistToPlayer < 40 && anchored)
+		{
+			var playerConnectingFix = physics_fixture_create();
+			physics_fixture_bind(playerConnectingFix, newRopeSegmentFix);
+			physics_fixture_bind(playerConnectingFix, playerFix);
+			physics_joint_distance_create(newRopeSegment, player, newRopeSegment.x, newRopeSegment.y, player.x, player.y, false);
+
+			stopMakingRope = true;
+		}
+		
+		physics_fixture_delete(newRopeSegmentFix);
 	}
 	// Destroy last rope segment
-	if (ds_stack_size(stackRopeSegmentObj) > 1 && ropeStartDistToPlayer < ropeDistDestroySegment)
-	{
-		instance_destroy(ds_stack_pop(stackRopeSegmentObj));
-		instance_destroy(ds_stack_pop(stackRopeSegmentFix));
-	}
+	//if (ds_stack_size(stackRopeSegmentObj) > 1 && ropeStartDistToPlayer < ropeDistDestroySegment)
+	//{
+	//	instance_destroy(ds_stack_pop(stackRopeSegmentObj));
+	//	instance_destroy(ds_stack_pop(stackRopeSegmentFix));
+	//}
 }
