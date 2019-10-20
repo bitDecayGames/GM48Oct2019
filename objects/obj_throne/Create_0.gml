@@ -1,5 +1,7 @@
 /// @description setup variables
 
+playerHasHit = false
+
 playerId = pointer_null;
 crumbleId = pointer_null;
 crownId = pointer_null;
