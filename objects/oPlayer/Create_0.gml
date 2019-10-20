@@ -12,6 +12,7 @@ playerState = pState.normal;
 ropeState = rState.noRope;
 Rope = pointer_null;
 
+global.currentRopeId = pointer_null
 acceleration = 1
 grappleAcceleration = 20
 
@@ -29,7 +30,6 @@ enum rState
 	stuck
 }
 
-var Fix = physics_fixture_create();
+Fix = physics_fixture_create();
 physics_fixture_set_box_shape(Fix, sprite_width / 2, sprite_height / 2);
 physics_fixture_bind(Fix, id);
-physics_fixture_delete(Fix);
