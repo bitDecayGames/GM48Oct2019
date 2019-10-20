@@ -1,9 +1,9 @@
 /// @description set up items
 
 items = [
-	"[W/A/S/D] to Move",
-	"[Hold Left Click] to Shoot your Hook",
 	"You can aim with your mouse",
+	"[Hold Left Click] to Shoot your Hook",
+	"[A/D] to Move while Grappled",
 ];
 itemLen = array_length_1d(items)
 
