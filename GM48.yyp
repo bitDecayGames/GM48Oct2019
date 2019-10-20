@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "1859a1f7-396f-4ec5-83ed-e1f1bd030b31",
+            "Value": {
+                "id": "0d862197-56a4-4e27-b8ff-fbf12bfb5f7b",
+                "resourcePath": "objects\\obj_play_lava\\obj_play_lava.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "18c834b1-eac7-4166-9b7d-eca36427ded3",
             "Value": {
                 "id": "89ae8557-ea25-4000-b223-680fe93855d5",
