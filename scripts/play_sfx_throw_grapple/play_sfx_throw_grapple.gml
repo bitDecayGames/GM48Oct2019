@@ -1,0 +1,1 @@
+audio_play_sound(throw_grapple, 0, false);
