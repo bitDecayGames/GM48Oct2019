@@ -132,5 +132,6 @@ if (mouse_check_button_pressed(mb_left))
 		}
 		stackRopeSegmentObj = array_create(0)
 		while(ds_stack_size(stackRopeJoints) > 0) physics_joint_delete(ds_stack_pop(stackRopeJoints))
+		sprite_index = sFroge;
 	}
 }
