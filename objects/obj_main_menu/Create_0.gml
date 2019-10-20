@@ -10,7 +10,9 @@ items = [
 ];
 itemLen = array_length_1d(items)
 
-itemHeight = 150;
+
+itemOffset = 220;
+itemHeight = 130;
 
 selected = 0;
 
@@ -19,7 +21,7 @@ objs = [];
 changed = true;
 
 for (var i = 0; i < itemLen; ++i) {
-	var obj = instance_create_depth(x, y + i * itemHeight, 0, obj_button);
+	var obj = instance_create_depth(x, y + itemOffset + i * itemHeight, 0, obj_button);
 	objs[i] = obj;
 }
 
